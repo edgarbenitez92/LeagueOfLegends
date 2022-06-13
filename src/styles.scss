@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+// Angular Material's custom theme
+@import 'styles/custom-theme';
+
+// Replace vendor's variables
+@import 'styles/variables';
+
+// Bootstrap stuff
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/utilities/api';
+
+// Own reset
+@import 'styles/reset';
+
+html,
+body {
+    height: 100%;
+    max-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
