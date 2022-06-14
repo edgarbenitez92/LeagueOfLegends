@@ -10,17 +10,25 @@
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$light-theme: mat.define-light-theme((color: (primary: mat.define-palette(mat.$indigo-palette, 900),
-                accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400),
-                warn: mat.define-palette(mat.$red-palette, 600),
-            ),
-        ));
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette, 900),
+      accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400),
+      warn: mat.define-palette(mat.$red-palette, 600),
+    ),
+  )
+);
 
-$dark-theme: mat.define-dark-theme((color: (primary: mat.define-palette(mat.$indigo-palette, 300),
-                accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400),
-                warn: mat.define-palette(mat.$red-palette, 300),
-            ),
-        ));
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette, 300),
+      accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400),
+      warn: mat.define-palette(mat.$red-palette, 300),
+    ),
+  )
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -29,5 +37,5 @@ $dark-theme: mat.define-dark-theme((color: (primary: mat.define-palette(mat.$ind
 @include mat.strong-focus-indicators-theme($light-theme);
 
 .dark-mode {
-    @include mat.all-component-colors($dark-theme);
+  @include mat.all-component-colors($dark-theme);
 }

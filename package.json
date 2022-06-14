@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prettier": "prettier --config ./.prettierrc --list-different --write src"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,8 @@
     "@commitlint/config-conventional": "^17.0.2",
     "bootstrap": "^5.1.3",
     "commitizen": "^4.2.4",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
