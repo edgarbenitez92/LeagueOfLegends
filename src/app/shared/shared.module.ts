@@ -1,6 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
@@ -34,7 +33,6 @@ import { MatNativeDateModule } from '@angular/material/core';
   ],
   imports: [
     CommonModule,
-    RouterModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -65,9 +63,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     SidenavComponent,
 
     // Modules
-    RouterModule,
     CommonModule,
-
     // Material
     MatButtonModule,
     MatCheckboxModule,

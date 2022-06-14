@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  opened: boolean = false;
+  opened: boolean = true;
   menu: string[] = [];
 
   constructor() { }
