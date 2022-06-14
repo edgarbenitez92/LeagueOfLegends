@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './views/home/home.module';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HomeModule],
-  providers: [],
+  imports: [AppRoutingModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
