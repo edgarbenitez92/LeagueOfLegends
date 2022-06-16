@@ -7,4 +7,4 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [],
   imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule],
 })
-export class CoreModule { }
+export class CoreModule {}

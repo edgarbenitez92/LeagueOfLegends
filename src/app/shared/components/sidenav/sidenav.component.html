@@ -1,11 +1,19 @@
-<mat-nav-list class="container">
-    <a routerLink="./list" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>sync_alt</mat-icon>
-        <span class="title">Champions List</span>
-    </a>
+<mat-toolbar class="sidenav__title">
+  <span>Menu</span>
 
-    <a routerLink="./find" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>find_replace</mat-icon>
-        <span class="title">Search Champion Skins</span>
-    </a>
+  <button mat-icon-button class="sidenav__title__toggle" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-nav-list class="container container__menu">
+  <a routerLink="./list" class="container__menu__titles" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon>sync_alt</mat-icon>
+    <span>Champions List</span>
+  </a>
+
+  <a routerLink="./find" class="container__menu__titles" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon>find_replace</mat-icon>
+    <span>Search Champion Skins</span>
+  </a>
 </mat-nav-list>

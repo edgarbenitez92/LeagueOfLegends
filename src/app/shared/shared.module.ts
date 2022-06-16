@@ -28,9 +28,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [
-    SidenavComponent
-  ],
+  declarations: [SidenavComponent],
   imports: [
     CommonModule,
     // Material
@@ -95,6 +93,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     //   provide: MatPaginatorIntl,
     //   useClass: CustomMatPaginatorIntl,
     // },
-  ]
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

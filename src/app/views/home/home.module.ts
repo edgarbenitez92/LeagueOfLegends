@@ -7,4 +7,4 @@ import { SharedModule } from 'src/app/shared/shared.module';
   declarations: [HomeComponent],
   imports: [HomeRoutingModule, SharedModule],
 })
-export class HomeModule { }
+export class HomeModule {}

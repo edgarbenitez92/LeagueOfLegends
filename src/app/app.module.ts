@@ -11,4 +11,4 @@ import { CoreModule } from './core/core.module';
   imports: [AppRoutingModule, SharedModule, HttpClientModule, CoreModule],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
