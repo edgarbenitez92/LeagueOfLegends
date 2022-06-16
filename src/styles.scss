@@ -1,8 +1,4 @@
-// Angular Material's custom theme
-@import 'styles/custom-theme';
-
-// Replace vendor's variables
-@import 'styles/variables';
+@import 'styles/main';
 
 // Bootstrap stuff
 @import '~bootstrap/scss/functions';
@@ -15,16 +11,18 @@
 @import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/utilities/api';
 
-// Own reset
-@import 'styles/reset';
-
 html,
 body {
   height: 100%;
   max-height: 100vh;
+  background-color: $color-tertiary-dark;
 }
 
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mat-drawer-inner-container {
+  background-color: $color-tertiary-dark;
 }

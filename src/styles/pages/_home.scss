@@ -1,0 +1,40 @@
+.home {
+  padding-top: 64px;
+
+  &__sidenav {
+    &__toolbar-1 {
+      background-color: $color-primary;
+    }
+
+    &__toolbar-2 {
+      background-color: $color-tertiary-dark;
+    }
+  }
+
+  &__navbar {
+    background-color: $color-tertiary-light;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0px 4px 60px #000;
+    z-index: 1;
+
+    &__links {
+      display: flex;
+      padding: 15px;
+      transition: 250ms;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $color-secondary;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.home__content {
+  min-height: calc(100vh - 64px);
+  background-color: $color-tertiary-dark;
+}
