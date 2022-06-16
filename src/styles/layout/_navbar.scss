@@ -3,12 +3,14 @@
 
     &__toolbar {
         background-color: $color-tertiary-light;
+
+        &-toggle:hover {
+            background-color: $color-secondary;
+        }
     }
 }
 
 .nav__link {
-    display: flex;
-    padding: 15px;
     transition: 250ms;
     border-radius: 10px;
 
