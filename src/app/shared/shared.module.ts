@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -28,7 +29,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [SidenavComponent],
+  declarations: [SidenavComponent, NavbarComponent],
   imports: [
     CommonModule,
     // Material
@@ -59,7 +60,7 @@ import { MatNativeDateModule } from '@angular/material/core';
   exports: [
     // Components
     SidenavComponent,
-
+    NavbarComponent,
     // Modules
     CommonModule,
     // Material
@@ -95,4 +96,4 @@ import { MatNativeDateModule } from '@angular/material/core';
     // },
   ],
 })
-export class SharedModule {}
+export class SharedModule { }

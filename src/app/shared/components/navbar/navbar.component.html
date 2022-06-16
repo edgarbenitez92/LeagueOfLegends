@@ -1,0 +1,39 @@
+<nav class="navbar position-fixed fixed-top w-100">
+    <mat-toolbar class="navbar__toolbar">
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <button class="nav-link" *ngIf="!sidenav.opened" mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <a mat-button routerLink="/home" class="text-decoration-none">LEAGUE OF LEGENDS</a>
+            <div class="d-flex align-items-center justify-content-center">
+                <!-- <button mat-mini-fab color="primary" class="me-3" aria-label="Settings"
+                    (click)="openAppSettingsDialog()">
+                    <mat-icon>settings</mat-icon>
+                </button>
+                <button *ngIf="sidenav" mat-mini-fab color="warn">
+                    (click)="openLogoutDialog()""
+                    <mat-icon>logout</mat-icon>
+                </button> -->
+
+                <a mat-button routerLink="./about" class="nav__link text-decoration-none" matTooltip="About me">
+                    <mat-icon>person</mat-icon>
+                </a>
+
+                <a mat-button href="https://github.com/edgarbenitez92/LeagueofLegendsApp" target="/blank"
+                    class="nav__link" matTooltip="Github Edgar Benítez">
+                    <mat-icon>
+                        <img src="./assets/icons/github-brands.svg" alt="Edgar Benítez Github" />
+                    </mat-icon>
+                </a>
+
+                <a mat-button href="https://www.linkedin.com/in/edgar-benítez-valera-a191b0105" target="/blank"
+                    class="nav__link" matTooltip="LinkedIn Edgar Benítez">
+                    <mat-icon>
+
+                        <img src="./assets/icons/linkedin-brands.svg" alt="Edgar Benítez LinkedIn" />
+                    </mat-icon>
+                </a>
+            </div>
+        </div>
+    </mat-toolbar>
+</nav>
