@@ -27,6 +27,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import { CustomTooltipConfig } from './custom/custom-tooltip-config';
 
 @NgModule({
   declarations: [SidenavComponent, NavbarComponent],
@@ -56,6 +58,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatTooltipModule,
   ],
   exports: [
     // Components
@@ -87,6 +90,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatTooltipModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
@@ -94,6 +98,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     //   provide: MatPaginatorIntl,
     //   useClass: CustomMatPaginatorIntl,
     // },
+    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: CustomTooltipConfig },
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

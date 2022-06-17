@@ -8,10 +8,10 @@
 
 .container__menu {
   &__titles {
-    color: $color-white  !important;
+    color: $color-white !important;
 
     &:hover {
-      background-color: $color-tertiary  !important;
+      background-color: $color-tertiary !important;
       transform: scale(1.1);
     }
   }

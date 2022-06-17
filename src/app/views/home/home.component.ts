@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
   opened: boolean = false;
   menu: string[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
