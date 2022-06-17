@@ -1,0 +1,21 @@
+.navbar {
+  z-index: 1;
+
+  &__nav {
+    background-color: $color-tertiary-light;
+
+    &-toggle:hover {
+      background-color: $color-secondary;
+    }
+
+    &-link {
+      transition: 250ms;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $color-secondary;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
