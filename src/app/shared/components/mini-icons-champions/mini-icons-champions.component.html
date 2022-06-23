@@ -1,11 +1,12 @@
-<div class="champion-card">
+<main class="champion-card">
   <a [routerLink]="'/champion/' + champion.id" class="champion-card__button">
-    <!-- Icono imagen de campeón -->
+    <!-- Icono champion image -->
     <div class="champion-card__image-container">
-      <img class="champion-card__image" [src]="urlImgMini" alt="Mini {{ champion.name }}" loading="lazy" />
+      <img class="champion-card__image" [src]="urlImgMini" alt="Mini {{ champion.name }}" />
+      <!-- loading="lazy" -->
     </div>
 
-    <!-- Nombre campeón -->
+    <!-- Champion Name -->
     <h5 class="champion-card__name">{{ champion.name | titlecase }}</h5>
   </a>
-</div>
+</main>

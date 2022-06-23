@@ -18,7 +18,7 @@ export class MiniIconsChampionsComponent {
   }
 
   ngOnInit(): void {
-    this.championsService.getVersions().subscribe((versions) => {
+    this.championsService.getLeagueOfLegendsVersions().subscribe((versions) => {
       let version = versions[0];
 
       this.urlImgMini = `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${this.champion.id}.png`;
