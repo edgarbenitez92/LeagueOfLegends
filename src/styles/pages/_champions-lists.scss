@@ -1,0 +1,25 @@
+.champions {
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 16px;
+
+    &-title {
+      font-size: x-large;
+      color: $color-white;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+.mat-divider {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
