@@ -1,0 +1,19 @@
+<div class="list">
+  <div class="type__view__icon">
+    <h1 class="type__champion__title">Champions List</h1>
+
+    <!-- <mat-button-toggle-group>
+            <mat-button-toggle class="mat-button-toggle-checked" matTooltip="Mini Champs"><img
+                    src="./assets/view_icon_list_white.svg" alt="view_mini_list" /></mat-button-toggle>
+            <mat-button-toggle [routerLink]="'/splashSkins'" matTooltip="Splash Champs"><img
+                    src="./assets/view_column_list_white.svg" alt="view_splash_list" /></mat-button-toggle>
+        </mat-button-toggle-group> -->
+  </div>
+  <mat-divider></mat-divider>
+
+  <div class="list__body">
+    <ng-container *ngFor="let champion of champions">
+      <app-mini-icons-champions [champion]="champion"></app-mini-icons-champions>
+    </ng-container>
+  </div>
+</div>

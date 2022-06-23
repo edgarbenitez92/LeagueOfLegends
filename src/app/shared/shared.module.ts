@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MiniIconsChampionsComponent } from './components/mini-icons-champions/mini-icons-champions.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -27,13 +28,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
 import { CustomTooltipConfig } from './custom/custom-tooltip-config';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [SidenavComponent, NavbarComponent],
+  declarations: [SidenavComponent, NavbarComponent, MiniIconsChampionsComponent],
   imports: [
     CommonModule,
+    RouterModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -59,13 +63,16 @@ import { CustomTooltipConfig } from './custom/custom-tooltip-config';
     MatToolbarModule,
     MatExpansionModule,
     MatTooltipModule,
+    MatButtonToggleModule,
   ],
   exports: [
     // Components
     SidenavComponent,
     NavbarComponent,
+    MiniIconsChampionsComponent,
     // Modules
     CommonModule,
+    RouterModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -91,6 +98,7 @@ import { CustomTooltipConfig } from './custom/custom-tooltip-config';
     MatToolbarModule,
     MatExpansionModule,
     MatTooltipModule,
+    MatButtonToggleModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

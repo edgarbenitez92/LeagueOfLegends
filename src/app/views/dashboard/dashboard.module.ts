@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { MiniIconsChampionsComponent } from './mini-icons-champions/mini-icons-champions.component';
+import { ChampionsListComponent } from './champions-list/champions-list.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, MiniIconsChampionsComponent],
+  declarations: [DashboardComponent, ChampionsListComponent],
   imports: [
     SharedModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
   ]
 })
 export class DashboardModule { }
