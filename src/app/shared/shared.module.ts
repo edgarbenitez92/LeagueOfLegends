@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MiniIconsChampionsComponent } from './components/mini-icons-champions/mini-icons-champions.component';
+import { SplashChampionComponent } from './components/splash-champion/splash-champion.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -34,7 +35,7 @@ import { CustomTooltipConfig } from './custom/custom-tooltip-config';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [SidenavComponent, NavbarComponent, MiniIconsChampionsComponent],
+  declarations: [SidenavComponent, NavbarComponent, MiniIconsChampionsComponent, SplashChampionComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -70,6 +71,7 @@ import { RouterModule } from '@angular/router';
     SidenavComponent,
     NavbarComponent,
     MiniIconsChampionsComponent,
+    SplashChampionComponent,
     // Modules
     CommonModule,
     RouterModule,
