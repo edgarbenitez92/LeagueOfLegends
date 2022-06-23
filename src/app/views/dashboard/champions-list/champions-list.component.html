@@ -1,6 +1,6 @@
-<div class="list">
-  <div class="type__view__icon">
-    <h1 class="type__champion__title">Champions List</h1>
+<div class="champions">
+  <div class="champions__type">
+    <h1 class="champions__type-title">Champions List</h1>
 
     <!-- <mat-button-toggle-group>
             <mat-button-toggle class="mat-button-toggle-checked" matTooltip="Mini Champs"><img
@@ -11,7 +11,7 @@
   </div>
   <mat-divider></mat-divider>
 
-  <div class="list__body">
+  <div class="champions__list">
     <ng-container *ngFor="let champion of champions">
       <app-splash-champion [champion]="champion"></app-splash-champion>
     </ng-container>
