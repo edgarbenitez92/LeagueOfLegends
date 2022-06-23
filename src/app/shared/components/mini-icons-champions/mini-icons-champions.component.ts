@@ -4,18 +4,16 @@ import { ChampionsService } from 'src/app/core/champions/champions.service';
 @Component({
   selector: 'app-mini-icons-champions',
   templateUrl: './mini-icons-champions.component.html',
-  styleUrls: ['./mini-icons-champions.component.scss']
+  styleUrls: ['./mini-icons-champions.component.scss'],
 })
 export class MiniIconsChampionsComponent {
-
   urlImgMini: string = '';
 
   loading: boolean = false;
 
   @Input() champion!: any;
 
-  constructor(private championsService: ChampionsService) {
-  }
+  constructor(private championsService: ChampionsService) {}
 
   ngOnInit(): void {
     this.championsService.getLeagueOfLegendsVersions().subscribe((versions) => {

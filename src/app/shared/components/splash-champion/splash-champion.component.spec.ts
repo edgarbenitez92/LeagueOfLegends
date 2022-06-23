@@ -8,9 +8,8 @@ describe('SplashChampionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SplashChampionComponent ]
-    })
-    .compileComponents();
+      declarations: [SplashChampionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

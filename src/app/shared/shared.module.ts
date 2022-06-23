@@ -35,7 +35,12 @@ import { CustomTooltipConfig } from './custom/custom-tooltip-config';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [SidenavComponent, NavbarComponent, MiniIconsChampionsComponent, SplashChampionComponent],
+  declarations: [
+    SidenavComponent,
+    NavbarComponent,
+    MiniIconsChampionsComponent,
+    SplashChampionComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,

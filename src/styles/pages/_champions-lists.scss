@@ -7,7 +7,8 @@
     padding: 0 16px;
 
     &-title {
-      margin: 0 !important;
+      font-size: x-large;
+      color: $color-white;
     }
   }
 
@@ -17,5 +18,8 @@
     justify-content: center;
     margin-top: 15px;
   }
+}
 
+.mat-divider {
+  border-top-color: rgba(255, 255, 255, 0.12);
 }

@@ -8,9 +8,8 @@ describe('MiniIconsChampionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MiniIconsChampionsComponent ]
-    })
-    .compileComponents();
+      declarations: [MiniIconsChampionsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

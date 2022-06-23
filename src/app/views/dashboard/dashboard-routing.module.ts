@@ -12,14 +12,12 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    children: [
-        { path: 'home', component: ChampionsListComponent }
-    ]
-  }
+    children: [{ path: 'home', component: ChampionsListComponent }],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {}

@@ -1,12 +1,12 @@
 <mat-sidenav-container class="dashboard" [hasBackdrop]="true">
-    <mat-sidenav #sidenav mode="push" [(opened)]="opened" [fixedInViewport]="true">
-        <app-sidenav [sidenav]="sidenav" [menus]="menu"></app-sidenav>
-    </mat-sidenav>
-    <mat-sidenav-content class="vh-100 d-flex flex-column">
-        <app-navbar [sidenav]="sidenav"></app-navbar>
-        <main class="pt-5 mt-5 pb-5 d-flex justify-content-center">
-            <router-outlet></router-outlet>
-        </main>
-        <!-- <app-footer class="mt-auto"></app-footer> -->
-    </mat-sidenav-content>
+  <mat-sidenav #sidenav mode="push" [(opened)]="opened" [fixedInViewport]="true">
+    <app-sidenav [sidenav]="sidenav" [menus]="menu"></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content class="vh-100 d-flex flex-column">
+    <app-navbar [sidenav]="sidenav"></app-navbar>
+    <main class="pt-5 mt-5 pb-5 d-flex justify-content-center">
+      <router-outlet></router-outlet>
+    </main>
+    <!-- <app-footer class="mt-auto"></app-footer> -->
+  </mat-sidenav-content>
 </mat-sidenav-container>
