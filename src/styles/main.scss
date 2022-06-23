@@ -4,7 +4,9 @@
 @import 'base/reset';
 @import 'base/typography';
 
+@import 'components/splash-card';
 @import 'layout/sidenav';
 @import 'layout/navbar';
 
 @import 'pages/dashboard';
+@import 'pages/champions-lists';
