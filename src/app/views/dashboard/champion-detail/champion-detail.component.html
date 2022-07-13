@@ -7,18 +7,18 @@
   </mat-grid-list>
 
   <ng-template #divChampion>
-    <div class="container-champion">
-      <div class="container-champion-splash">
+    <div class="champion">
+      <div class="champion__splash">
         <!-- Splash con Pipe -->
-        <img [src]="champion | imageSplash" alt="champion.name" />
+        <img [src]="champion | imageSplash" alt="champion.name" id="splashImg" />
       </div>
 
-      <div class="container-champion-specifications">
-        <div class="specifications">
-          <h1>
-            {{ champion.name }}
-            <small class="tags">({{ champion.tags }})</small>
-          </h1>
+      <div class="champion__specifications">
+        <div class="champion__specifications__titles">
+          <h4>
+            <span class="champion__specifications__titles-name">{{ champion.name }} </span>
+            <small class="champion__specifications__titles-tags">({{ champion.tags }})</small>
+          </h4>
           <button mat-button color="warn" (click)="goBack()" matTooltip="Return">
             <mat-icon>reply_all</mat-icon>
           </button>
@@ -26,36 +26,36 @@
 
         <mat-divider></mat-divider>
 
-        <div class="champion__description">
-          <h2 class="champion__description__1">{{ champion.title }}</h2>
-          <p class="champion__description__2">{{ champion.lore }}</p>
-          <h3 class="champion__description__3">Spells description:</h3>
+        <div class="champion__specifications__body mt-3 mb-4">
+          <h5 class="champion__specifications__body-title">{{ champion.title }}</h5>
+          <p class="champion__specifications__body-lore">{{ champion.lore }}</p>
+          <h5 class="champion__specifications__body-spells">Spells description:</h5>
         </div>
 
-        <mat-list *ngFor="let spell of champion.spells" class="champion__spell">
-          <mat-list-item class="champion__spell__image">
-            <div class="champion__spell_image__all">
+        <ul *ngFor="let spell of champion.spells" >
+          <li class="champion__specifications__spells">
+            <div class="champion__specifications__spells-image">
               <img
                 [src]="
                   'https://ddragon.leagueoflegends.com/cdn/' +
                   version +
-                  '/img/spell/{{ spell.image.full }}'
+                  '/img/spell/' + spell.image.full
                 "
                 alt="{{ spell.name }}"
                 id="SpellName"
               />
               <!-- (error)="noImage($event)" -->
             </div>
-            <div>
-              <h4 class="champion__spell__name">
+            <div class="champion__specifications__spells-specifications">
+              <h4 class="champion__specifications__spells-specifications-name">
                 {{ spell.name | titlecase }}
               </h4>
-              <p class="champion__spell__description">
+              <p class="champion__specifications__spells-specifications-description">
                 {{ spell.description | titlecase }}
               </p>
             </div>
-          </mat-list-item>
-        </mat-list>
+          </li>
+        </ul>
       </div>
     </div>
   </ng-template>

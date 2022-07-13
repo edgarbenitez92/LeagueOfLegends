@@ -19,11 +19,16 @@ export class ChampionDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.version = this.checkCurrentVersion();
+    this.checkCurrentVersion();
+    console.log('version: ', this.version)
 
     this.activatedRoute.params.subscribe(({ id }) => {
       this.getChampionDetails(id);
     });
+
+    setTimeout(() => {
+      console.log('version timeout: ', this.version);
+    }, 1000);
   }
 
   getChampionDetails(id: string) {
@@ -32,7 +37,6 @@ export class ChampionDetailComponent implements OnInit {
         for (let championName in data) {
           this.champion = data[championName];
         }
-        console.log('responde: ', this.champion);
       },
       // error: (error) => {
       // this.spinner.hide();
@@ -42,12 +46,14 @@ export class ChampionDetailComponent implements OnInit {
     });
   }
 
-  checkCurrentVersion(): string {
-    let lastVersion!: string;
+  checkCurrentVersion() {
     this.championService
       .getLeagueOfLegendsVersions()
-      .subscribe((versions) => (lastVersion = versions[0]));
-    return lastVersion;
+      .subscribe({
+        next: (versions) => {
+        this.version = versions[0];
+      },
+    });
   }
 
   goBack() {}
