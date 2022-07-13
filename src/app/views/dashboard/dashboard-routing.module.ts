@@ -15,7 +15,7 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: 'home', component: ChampionsListComponent },
-      { path: 'champion/:id', component: ChampionDetailComponent },
+      { path: 'champion/:id', component: ChampionDetailComponent }
     ],
   },
 ];
@@ -24,4 +24,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DashboardRoutingModule {}
+export class DashboardRoutingModule { }
