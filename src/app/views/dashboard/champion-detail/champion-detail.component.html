@@ -1,1 +1,62 @@
-<p>champion-detail works!</p>
+<div class="container">
+  <!-- Spinner de carga -->
+  <mat-grid-list cols="1" *ngIf="!champion; else divChampion">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <ng-template #divChampion>
+    <div class="container-champion">
+      <div class="container-champion-splash">
+        <!-- Splash con Pipe -->
+        <img [src]="champion | imageSplash" alt="champion.name" />
+      </div>
+
+      <div class="container-champion-specifications">
+        <div class="specifications">
+          <h1>
+            {{ champion.name }}
+            <small class="tags">({{ champion.tags }})</small>
+          </h1>
+          <button mat-button color="warn" (click)="goBack()" matTooltip="Return">
+            <mat-icon>reply_all</mat-icon>
+          </button>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="champion__description">
+          <h2 class="champion__description__1">{{ champion.title }}</h2>
+          <p class="champion__description__2">{{ champion.lore }}</p>
+          <h3 class="champion__description__3">Spells description:</h3>
+        </div>
+
+        <mat-list *ngFor="let spell of champion.spells" class="champion__spell">
+          <mat-list-item class="champion__spell__image">
+            <div class="champion__spell_image__all">
+              <img
+                [src]="
+                  'https://ddragon.leagueoflegends.com/cdn/' +
+                  version +
+                  '/img/spell/{{ spell.image.full }}'
+                "
+                alt="{{ spell.name }}"
+                id="SpellName"
+              />
+              <!-- (error)="noImage($event)" -->
+            </div>
+            <div>
+              <h4 class="champion__spell__name">
+                {{ spell.name | titlecase }}
+              </h4>
+              <p class="champion__spell__description">
+                {{ spell.description | titlecase }}
+              </p>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </ng-template>
+</div>
