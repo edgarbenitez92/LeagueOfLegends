@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { map, pluck } from 'rxjs';
 import { ChampionsService } from 'src/app/core/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
@@ -11,9 +12,14 @@ import { Champion } from 'src/app/shared/interfaces/champions';
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];
 
-  constructor(private championsService: ChampionsService) {}
+  constructor(
+    private championsService: ChampionsService,
+    private spinner: NgxSpinnerService,
+    ) {}
 
   ngOnInit(): void {
+    this.spinner.show();
+
     this.championsService
       .getChampions()
       .pipe(
@@ -32,6 +38,19 @@ export class ChampionsListComponent implements OnInit {
           return championsCards;
         })
       )
-      .subscribe((champions: any) => (this.champions = champions));
+      .subscribe({
+      next: (champions: any) =>
+         (this.champions = champions)
+      ,
+      error: (error) => {
+      this.spinner.hide();
+      // this.notifyService.showHTMLErrorMessage(error.name, error.message, GLOBALS.TOASTER.TITLE_ERROR);
+      },
+      complete: () => {
+        setTimeout(() => {
+          this.spinner.hide()
+        }, 5000);
+      }
+      });
   }
 }
