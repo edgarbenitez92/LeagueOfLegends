@@ -6,6 +6,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MiniIconsChampionsComponent } from './components/mini-icons-champions/mini-icons-champions.component';
 import { SplashChampionComponent } from './components/splash-champion/splash-champion.component';
 
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -48,6 +50,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
   imports: [
     CommonModule,
     RouterModule,
+    NgxSpinnerModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -87,6 +90,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     RouterModule,
     // Pipes
     ImageSplashPipe,
+    // Libraries
+    NgxSpinnerModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
