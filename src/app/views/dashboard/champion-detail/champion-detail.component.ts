@@ -20,7 +20,7 @@ export class ChampionDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkCurrentVersion();
-    console.log('version: ', this.version)
+    console.log('version: ', this.version);
 
     this.activatedRoute.params.subscribe(({ id }) => {
       this.getChampionDetails(id);
@@ -47,14 +47,18 @@ export class ChampionDetailComponent implements OnInit {
   }
 
   checkCurrentVersion() {
-    this.championService
-      .getLeagueOfLegendsVersions()
-      .subscribe({
-        next: (versions) => {
+    this.championService.getLeagueOfLegendsVersions().subscribe({
+      next: (versions) => {
         this.version = versions[0];
       },
     });
   }
 
-  goBack() {}
+  goHome() {
+    this.router.navigate(['/dashboard/home']);
+  }
+
+  imageNotFound({ target }: any) {
+    target.src = './assets/images/errorImageSpell.jpg';
+  }
 }

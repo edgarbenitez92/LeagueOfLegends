@@ -10,46 +10,47 @@
     <div class="champion">
       <div class="champion__splash">
         <!-- Splash con Pipe -->
-        <img [src]="champion | imageSplash" alt="champion.name" id="splashImg" />
+        <img [src]="champion | imageSplash" alt="champion.name" id="SplashImg" />
       </div>
 
       <div class="champion__specifications">
         <div class="champion__specifications__titles">
-          <h4>
-            <span class="champion__specifications__titles-name">{{ champion.name }} </span>
+          <h3>
+            <small class="champion__specifications__titles-name">{{ champion.name }} </small>
             <small class="champion__specifications__titles-tags">({{ champion.tags }})</small>
-          </h4>
-          <button mat-button color="warn" (click)="goBack()" matTooltip="Return">
+          </h3>
+          <button mat-button color="warn" (click)="goHome()" matTooltip="Return">
             <mat-icon>reply_all</mat-icon>
           </button>
         </div>
 
         <mat-divider></mat-divider>
 
-        <div class="champion__specifications__body mt-3 mb-4">
+        <div class="champion__specifications__body mt-2 mb-3">
           <h5 class="champion__specifications__body-title">{{ champion.title }}</h5>
           <p class="champion__specifications__body-lore">{{ champion.lore }}</p>
           <h5 class="champion__specifications__body-spells">Spells description:</h5>
         </div>
 
-        <ul *ngFor="let spell of champion.spells" >
+        <ul *ngFor="let spell of champion.spells">
           <li class="champion__specifications__spells">
             <div class="champion__specifications__spells-image">
               <img
                 [src]="
                   'https://ddragon.leagueoflegends.com/cdn/' +
                   version +
-                  '/img/spell/' + spell.image.full
+                  '/img/spell/' +
+                  spell.image.full
                 "
                 alt="{{ spell.name }}"
                 id="SpellName"
+                (error)="imageNotFound($event)"
               />
-              <!-- (error)="noImage($event)" -->
             </div>
             <div class="champion__specifications__spells-specifications">
-              <h4 class="champion__specifications__spells-specifications-name">
+              <h5 class="champion__specifications__spells-specifications-name">
                 {{ spell.name | titlecase }}
-              </h4>
+              </h5>
               <p class="champion__specifications__spells-specifications-description">
                 {{ spell.description | titlecase }}
               </p>
