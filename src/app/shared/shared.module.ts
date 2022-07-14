@@ -37,6 +37,7 @@ import { CustomTooltipConfig } from './custom/custom-tooltip-config';
 import { RouterModule } from '@angular/router';
 import { ImageSplashPipe } from './pipe/image-splash.pipe';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     SplashChampionComponent,
     // Pipes
     ImageSplashPipe,
+    // Directives
+    LazyLoadingImgDirective,
   ],
   imports: [
     CommonModule,
@@ -92,6 +95,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ImageSplashPipe,
     // Libraries
     NgxSpinnerModule,
+    // Directives
+    LazyLoadingImgDirective,
     // Material
     MatButtonModule,
     MatCheckboxModule,

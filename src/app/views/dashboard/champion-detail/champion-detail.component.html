@@ -2,7 +2,7 @@
   <div class="champion">
     <div class="champion__splash">
       <!-- Splash con Pipe -->
-      <img [src]="champion | imageSplash" alt="champion.name" id="SplashImg" />
+      <img [src]="champion | imageSplash" alt="champion.name" id="SplashImg" loading="lazy" />
     </div>
 
     <div class="champion__specifications">
@@ -37,6 +37,7 @@
               alt="{{ spell.name }}"
               id="SpellName"
               (error)="imageNotFound($event)"
+              loading="lazy"
             />
           </div>
           <div class="champion__specifications__spells-specifications">
