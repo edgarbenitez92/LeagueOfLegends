@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ChampionsService } from 'src/app/core/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
 
@@ -15,7 +16,8 @@ export class ChampionDetailComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private championService: ChampionsService
+    private championService: ChampionsService,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit(): void {
@@ -23,26 +25,23 @@ export class ChampionDetailComponent implements OnInit {
     console.log('version: ', this.version);
 
     this.activatedRoute.params.subscribe(({ id }) => {
-      this.getChampionDetails(id);
+      this.getChampionDetailsById(id);
     });
-
-    setTimeout(() => {
-      console.log('version timeout: ', this.version);
-    }, 1000);
   }
 
-  getChampionDetails(id: string) {
+  getChampionDetailsById(id: string) {
+    this.spinner.show();
+
     return this.championService.getChampionById(id).subscribe({
       next: ({ data }) => {
         for (let championName in data) {
           this.champion = data[championName];
         }
       },
-      // error: (error) => {
-      // this.spinner.hide();
-      // this.notifyService.showHTMLErrorMessage(error.name, error.message, GLOBALS.TOASTER.TITLE_ERROR);
-      // },
-      // complete: () => this.spinner.hide()
+      error: (error) => {
+        this.spinner.hide();
+      },
+      complete: () => this.spinner.hide(),
     });
   }
 

@@ -12,12 +12,13 @@ import { Champion } from 'src/app/shared/interfaces/champions';
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];
 
-  constructor(
-    private championsService: ChampionsService,
-    private spinner: NgxSpinnerService,
-    ) {}
+  constructor(private championsService: ChampionsService, private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
+    this.getChampions();
+  }
+
+  getChampions() {
     this.spinner.show();
 
     this.championsService
@@ -39,18 +40,11 @@ export class ChampionsListComponent implements OnInit {
         })
       )
       .subscribe({
-      next: (champions: any) =>
-         (this.champions = champions)
-      ,
-      error: (error) => {
-      this.spinner.hide();
-      // this.notifyService.showHTMLErrorMessage(error.name, error.message, GLOBALS.TOASTER.TITLE_ERROR);
-      },
-      complete: () => {
-        setTimeout(() => {
-          this.spinner.hide()
-        }, 5000);
-      }
+        next: (champions: any) => (this.champions = champions),
+        error: (error) => {
+          this.spinner.hide();
+        },
+        complete: () => this.spinner.hide(),
       });
   }
 }
