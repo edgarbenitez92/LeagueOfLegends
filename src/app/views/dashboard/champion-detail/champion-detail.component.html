@@ -1,0 +1,63 @@
+<div class="container">
+  <!-- Spinner de carga -->
+  <mat-grid-list cols="1" *ngIf="!champion; else divChampion">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <ng-template #divChampion>
+    <div class="champion">
+      <div class="champion__splash">
+        <!-- Splash con Pipe -->
+        <img [src]="champion | imageSplash" alt="champion.name" id="SplashImg" />
+      </div>
+
+      <div class="champion__specifications">
+        <div class="champion__specifications__titles">
+          <h3>
+            <small class="champion__specifications__titles-name">{{ champion.name }} </small>
+            <small class="champion__specifications__titles-tags">({{ champion.tags }})</small>
+          </h3>
+          <button mat-button color="warn" (click)="goHome()" matTooltip="Return">
+            <mat-icon>reply_all</mat-icon>
+          </button>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="champion__specifications__body mt-2 mb-3">
+          <h5 class="champion__specifications__body-title">{{ champion.title }}</h5>
+          <p class="champion__specifications__body-lore">{{ champion.lore }}</p>
+          <h5 class="champion__specifications__body-spells">Spells description:</h5>
+        </div>
+
+        <ul *ngFor="let spell of champion.spells">
+          <li class="champion__specifications__spells">
+            <div class="champion__specifications__spells-image">
+              <img
+                [src]="
+                  'https://ddragon.leagueoflegends.com/cdn/' +
+                  version +
+                  '/img/spell/' +
+                  spell.image.full
+                "
+                alt="{{ spell.name }}"
+                id="SpellName"
+                (error)="imageNotFound($event)"
+              />
+            </div>
+            <div class="champion__specifications__spells-specifications">
+              <h5 class="champion__specifications__spells-specifications-name">
+                {{ spell.name | titlecase }}
+              </h5>
+              <p class="champion__specifications__spells-specifications-description">
+                {{ spell.description | titlecase }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-template>
+</div>

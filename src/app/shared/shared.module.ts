@@ -33,6 +33,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
 import { CustomTooltipConfig } from './custom/custom-tooltip-config';
 import { RouterModule } from '@angular/router';
+import { ImageSplashPipe } from './pipe/image-splash.pipe';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     MiniIconsChampionsComponent,
     SplashChampionComponent,
+    // Pipes
+    ImageSplashPipe,
   ],
   imports: [
     CommonModule,
@@ -70,6 +74,7 @@ import { RouterModule } from '@angular/router';
     MatExpansionModule,
     MatTooltipModule,
     MatButtonToggleModule,
+    MatGridListModule,
   ],
   exports: [
     // Components
@@ -80,6 +85,8 @@ import { RouterModule } from '@angular/router';
     // Modules
     CommonModule,
     RouterModule,
+    // Pipes
+    ImageSplashPipe,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -105,6 +112,7 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     MatExpansionModule,
     MatTooltipModule,
+    MatGridListModule,
     MatButtonToggleModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

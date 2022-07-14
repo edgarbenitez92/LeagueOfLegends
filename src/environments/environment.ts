@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiBaseUrl: 'https://ddragon.leagueoflegends.com/cdn',
 };
 
 /*
