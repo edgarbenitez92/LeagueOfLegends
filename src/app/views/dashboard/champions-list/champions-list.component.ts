@@ -12,7 +12,7 @@ import { Champion } from 'src/app/shared/interfaces/champions';
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];
 
-  constructor(private championsService: ChampionsService, private spinner: NgxSpinnerService) {}
+  constructor(private championsService: ChampionsService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.getChampions();
@@ -34,7 +34,8 @@ export class ChampionsListComponent implements OnInit {
             const id = champion.id;
             const difficulty = champion.info.difficulty;
             const roles = champion.tags;
-            championsCards.push({ name, image, id, difficulty, roles });
+            const miniImage = `https://ddragon.leagueoflegends.com/cdn/${champion.version}/img/champion/${champion.id}.png`;
+            championsCards.push({ name, image, miniImage, id, difficulty, roles });
           }
           return championsCards;
         })

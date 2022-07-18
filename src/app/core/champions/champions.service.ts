@@ -17,10 +17,7 @@ export class ChampionsService {
   // Url Skin de Campeón
   private skinUrl: string = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading';
 
-  champion!: Champion;
-  skin!: Skin;
-
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getLeagueOfLegendsVersions(): Observable<string[]> {
     return this.http.get<string[]>('https://ddragon.leagueoflegends.com/api/versions.json');
