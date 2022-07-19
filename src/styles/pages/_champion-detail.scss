@@ -1,10 +1,18 @@
 .champion {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  max-width: 960px;
-  margin: 0 auto;
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
   &__splash {
     grid-column: 1;
@@ -80,9 +88,18 @@
 
 img#SplashImg {
   width: 100%;
+  max-width: 300px;
   border-radius: 20px;
   position: sticky;
   top: 75px;
+
+  @media only screen and (min-width: 750px) {
+    min-width: 200px;
+  }
+
+  @media only screen and (min-width: 750px) {
+    min-width: 300px;
+  }
 }
 
 img#SpellName {

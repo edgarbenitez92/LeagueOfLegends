@@ -1,11 +1,15 @@
 .splash {
   background-color: $color-tertiary;
-  width: 180px;
+  width: 170px;
   height: auto;
   padding: 8px;
   margin: 4px;
   transition: 250ms;
   border-radius: 5px;
+
+  @media screen and (min-width: 800px) {
+    width: 180px;
+  }
 
   &:hover {
     background-color: $color-tertiary-dark;
@@ -26,8 +30,12 @@
     }
 
     &-card {
-      height: 328px;
+      height: 280px;
       width: auto;
+
+      @media screen and (min-width: 800px) {
+        height: 300px;
+      }
     }
 
     &-image {
