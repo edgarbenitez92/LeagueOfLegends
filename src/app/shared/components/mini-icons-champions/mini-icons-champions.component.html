@@ -2,8 +2,7 @@
   <a [routerLink]="'/champion/' + champion.id" class="champion-card__button">
     <!-- Icono champion image -->
     <div class="champion-card__image-container">
-      <img class="champion-card__image" [src]="urlImgMini" alt="Mini {{ champion.name }}" />
-      <!-- loading="lazy" -->
+      <img class="champion-card__image" [src]="champion.miniImage" alt="Mini {{ champion.name }}" loading="lazy" />
     </div>
 
     <!-- Champion Name -->
