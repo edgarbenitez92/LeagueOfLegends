@@ -10,6 +10,10 @@
       font-size: x-large;
       color: $color-white;
     }
+
+    &-toogle {
+      border-color: #0f111e;
+    }
   }
 
   &__list {
@@ -22,4 +26,8 @@
 
 .mat-divider {
   border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.checked {
+  background-color: rgba(255, 255, 255, 0.12);
 }
