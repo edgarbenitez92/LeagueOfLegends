@@ -3,27 +3,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ChampionsService } from 'src/app/core/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
+import { SwiperConfigModel } from 'src/app/shared/custom/custom-swiper-config';
+
+// SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 @Component({
   selector: 'app-champion-detail',
   templateUrl: './champion-detail.component.html',
   styleUrls: ['./champion-detail.component.scss'],
 })
+
+
 export class ChampionDetailComponent implements OnInit {
   champion!: Champion;
   version: string = '';
+  swiperConfig = SwiperConfigModel;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private championService: ChampionsService,
-    private spinner: NgxSpinnerService
-  ) {}
+    private spinner: NgxSpinnerService,
+  ) { }
 
   ngOnInit(): void {
-    this.checkCurrentVersion();
-    console.log('version: ', this.version);
-
     this.activatedRoute.params.subscribe(({ id }) => {
       this.getChampionDetailsById(id);
     });
@@ -33,23 +38,14 @@ export class ChampionDetailComponent implements OnInit {
     this.spinner.show();
 
     return this.championService.getChampionById(id).subscribe({
-      next: ({ data }) => {
-        for (let championName in data) {
-          this.champion = data[championName];
-        }
+      next: ({ data, version }) => {
+        this.version = version;
+        for (let championName in data) this.champion = data[championName];
       },
       error: (error) => {
         this.spinner.hide();
       },
       complete: () => this.spinner.hide(),
-    });
-  }
-
-  checkCurrentVersion() {
-    this.championService.getLeagueOfLegendsVersions().subscribe({
-      next: (versions) => {
-        this.version = versions[0];
-      },
     });
   }
 
