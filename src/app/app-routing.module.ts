@@ -14,12 +14,12 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: '/error/not-found',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -137,4 +137,4 @@ import { SwiperModule } from 'swiper/angular';
     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: CustomTooltipConfig },
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

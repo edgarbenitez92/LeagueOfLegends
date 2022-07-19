@@ -3,12 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/error/not-found', pathMatch: 'full'},
-  { path: 'not-found', component: NotFoundComponent }
+  { path: 'not-found', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ErrorRoutingModule { }
