@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { map, pluck } from 'rxjs';
 import { ChampionsService } from 'src/app/core/champions/champions.service';
@@ -11,8 +12,13 @@ import { Champion } from 'src/app/shared/interfaces/champions';
 })
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];
+  typeImage: string = 'splash';
 
-  constructor(private championsService: ChampionsService, private spinner: NgxSpinnerService) {}
+  isInitView: boolean;
+
+  constructor(private championsService: ChampionsService, private spinner: NgxSpinnerService) {
+    this.isInitView = true;
+  }
 
   ngOnInit(): void {
     this.getChampions();
@@ -34,7 +40,8 @@ export class ChampionsListComponent implements OnInit {
             const id = champion.id;
             const difficulty = champion.info.difficulty;
             const roles = champion.tags;
-            championsCards.push({ name, image, id, difficulty, roles });
+            const miniImage = `https://ddragon.leagueoflegends.com/cdn/${champion.version}/img/champion/${champion.id}.png`;
+            championsCards.push({ name, image, miniImage, id, difficulty, roles });
           }
           return championsCards;
         })
@@ -46,5 +53,9 @@ export class ChampionsListComponent implements OnInit {
         },
         complete: () => this.spinner.hide(),
       });
+  }
+
+  onSelectTypeView({ source: { checked } }: MatButtonToggleChange) {
+    this.isInitView = !this.isInitView;
   }
 }
