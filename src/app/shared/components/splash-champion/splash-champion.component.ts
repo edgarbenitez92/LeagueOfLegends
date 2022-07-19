@@ -8,8 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SplashChampionComponent implements OnInit {
   @Input() champion!: any;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

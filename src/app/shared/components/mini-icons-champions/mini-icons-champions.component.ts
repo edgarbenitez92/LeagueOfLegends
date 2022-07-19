@@ -9,8 +9,7 @@ import { ChampionsService } from 'src/app/core/champions/champions.service';
 export class MiniIconsChampionsComponent {
   @Input() champion!: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }
