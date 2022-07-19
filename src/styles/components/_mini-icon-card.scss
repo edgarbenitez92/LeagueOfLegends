@@ -1,0 +1,30 @@
+.mini__icon {
+    width: 100px;
+    height: auto;
+    padding: 8px;
+    margin: 4px;
+    transition: 250ms;
+
+    &:hover {
+        background-color: $color-tertiary-dark;
+        transform: scale(1.2);
+    }
+
+    &__champion {
+        text-decoration: none;
+
+        &-image {
+            width: 100%;
+            border-radius: 80px;
+            margin-bottom: 5px;
+        }
+
+        &-name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-white;
+            font-size: 10px;
+        }
+    }
+}
