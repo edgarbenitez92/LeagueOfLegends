@@ -3,10 +3,18 @@
     <h1 class="champions__type-title mb-3">Champions List</h1>
 
     <mat-button-toggle-group class="champions__type-toggle" (change)="onSelectTypeView($event)">
-      <mat-button-toggle [ngClass]="{ checked: isInitView }" [checked]="isInitView">
+      <mat-button-toggle
+        matTooltip="Mini Champions"
+        [ngClass]="{ checked: isInitView }"
+        [checked]="isInitView"
+      >
         <img src="./assets/icons/view_icon_list.svg" alt="mini_icon_view" />
       </mat-button-toggle>
-      <mat-button-toggle [ngClass]="{ checked: !isInitView }" [checked]="!isInitView">
+      <mat-button-toggle
+        matTooltip="Splash Champions"
+        [ngClass]="{ checked: !isInitView }"
+        [checked]="!isInitView"
+      >
         <img src="./assets/icons/view_column_list.svg" alt="splash_view" />
       </mat-button-toggle>
     </mat-button-toggle-group>

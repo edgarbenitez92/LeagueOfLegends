@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { ChampionsListComponent } from './champions-list/champions-list.component';
 import { ChampionDetailComponent } from './champion-detail/champion-detail.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: 'home', component: ChampionsListComponent },
+      { path: 'about', component: AboutComponent },
       { path: 'champion/:id', component: ChampionDetailComponent },
     ],
   },
