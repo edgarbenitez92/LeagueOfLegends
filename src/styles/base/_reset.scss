@@ -1,6 +1,5 @@
 // Prevents that the normal links color where Bootstrap's primary color
 a {
-
   &.mat-button,
   &.mat-raised-button,
   &.mat-fab,
@@ -13,8 +12,8 @@ a {
 }
 
 .mat-tooltip {
-  font-family: frizQuadrata, "Helvetica Neue", sans-serif;
+  font-family: frizQuadrata, 'Helvetica Neue', sans-serif;
   font-size: 10px;
   padding-top: 6px;
-  padding-bottom: 6px
+  padding-bottom: 6px;
 }
