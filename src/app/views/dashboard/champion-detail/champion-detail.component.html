@@ -1,15 +1,23 @@
 <section class="container" *ngIf="champion">
   <div class="champion">
-    <div class="champion__splash">
-      <!-- Splash con Pipe -->
-      <img
-        class="mb-5"
-        [src]="champion | imageSplash"
-        alt="champion.name"
-        id="SplashImg"
-        loading="lazy"
-      />
-    </div>
+    <swiper [config]="swiperConfig" class="swiper">
+      <ng-template *ngFor="let skin of champion.skins" swiperSlide>
+        <img
+          class="mb-5"
+          style="position: sticky !important"
+          [src]="
+            'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' +
+            champion.id +
+            '_' +
+            skin.num +
+            '.jpg'
+          "
+          alt="champion.name"
+          id="SplashImg"
+          loading="lazy"
+        />
+      </ng-template>
+    </swiper>
 
     <div class="champion__specifications">
       <div class="champion__specifications__titles">

@@ -38,6 +38,7 @@ import { RouterModule } from '@angular/router';
 import { ImageSplashPipe } from './pipe/image-splash.pipe';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive
     CommonModule,
     RouterModule,
     NgxSpinnerModule,
+    SwiperModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -95,6 +97,7 @@ import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive
     ImageSplashPipe,
     // Libraries
     NgxSpinnerModule,
+    SwiperModule,
     // Directives
     LazyLoadingImgDirective,
     // Material
