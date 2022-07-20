@@ -1,5 +1,7 @@
 .sidenav__title {
   background-color: $color-primary;
+  color: $color-white;
+  font-size: 16px;
 
   &__toggle:hover {
     background-color: $color-secondary;
@@ -8,10 +10,11 @@
 
 .container__menu {
   &__titles {
-    color: $color-white !important;
+    color: $color-white  !important;
+    font-size: 14px;
 
     &:hover {
-      background-color: $color-tertiary !important;
+      background-color: $color-tertiary  !important;
       transform: scale(1.1);
     }
   }
