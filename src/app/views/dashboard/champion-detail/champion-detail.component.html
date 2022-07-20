@@ -1,10 +1,21 @@
 <section class="container" *ngIf="champion">
   <div class="champion">
-    <swiper #swiperRef [config]="swiperConfig" class="mySwiper">
+    <swiper [config]="swiperConfig" class="swiper">
       <ng-template *ngFor="let skin of champion.skins" swiperSlide>
-        <img class="mb-5"
-          [src]="'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + champion.id + '_' + skin.num + '.jpg'"
-          alt="champion.name" id="SplashImg" loading="lazy" />
+        <img
+          class="mb-5"
+          style="position: sticky !important"
+          [src]="
+            'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' +
+            champion.id +
+            '_' +
+            skin.num +
+            '.jpg'
+          "
+          alt="champion.name"
+          id="SplashImg"
+          loading="lazy"
+        />
       </ng-template>
     </swiper>
 
@@ -30,12 +41,18 @@
       <ul *ngFor="let spell of champion.spells">
         <li class="champion__specifications__spells">
           <div class="champion__specifications__spells-image">
-            <img [src]="
+            <img
+              [src]="
                 'https://ddragon.leagueoflegends.com/cdn/' +
                 version +
                 '/img/spell/' +
                 spell.image.full
-              " alt="{{ spell.name }}" id="SpellName" (error)="imageNotFound($event)" loading="lazy" />
+              "
+              alt="{{ spell.name }}"
+              id="SpellName"
+              (error)="imageNotFound($event)"
+              loading="lazy"
+            />
           </div>
           <div class="champion__specifications__spells-specifications">
             <h5 class="champion__specifications__spells-specifications-name">

@@ -1,30 +1,61 @@
 <nav class="navbar position-fixed fixed-top w-100">
   <mat-toolbar class="navbar__nav">
     <div class="d-flex align-items-center w-100 justify-content-between">
-      <button class="navbar__nav-toggle" *ngIf="!sidenav.opened" mat-icon-button (click)="sidenav.toggle()">
+      <button
+        class="navbar__nav-toggle"
+        *ngIf="!sidenav.opened"
+        mat-icon-button
+        (click)="sidenav.toggle()"
+      >
         <mat-icon>menu</mat-icon>
       </button>
 
-      <a mat-button id="navbar-title-lol" routerLink="./home" class="text-decoration-none" style="color: white">
+      <a
+        mat-button
+        id="navbar-title-lol"
+        routerLink="./home"
+        class="text-decoration-none"
+        style="color: white"
+      >
         LEAGUE OF LEGENDS
       </a>
 
       <div class="d-flex align-items-center justify-content-center">
-        <a mat-button routerLink="./home" class="navbar__nav-link text-decoration-none" matTooltip="Home">
+        <a
+          mat-button
+          routerLink="./home"
+          class="navbar__nav-link text-decoration-none"
+          matTooltip="Home"
+        >
           <mat-icon>home</mat-icon>
         </a>
 
-        <a mat-button routerLink="./about" class="navbar__nav-link text-decoration-none" matTooltip="About me">
+        <a
+          mat-button
+          routerLink="./about"
+          class="navbar__nav-link text-decoration-none"
+          matTooltip="About me"
+        >
           <mat-icon>person</mat-icon>
         </a>
 
-        <a mat-button href="https://github.com/edgarbenitez92/LeagueofLegends" target="/blank" class="navbar__nav-link"
-          matTooltip="Github">
+        <a
+          mat-button
+          href="https://github.com/edgarbenitez92/LeagueofLegends"
+          target="/blank"
+          class="navbar__nav-link"
+          matTooltip="Github"
+        >
           <img src="./assets/icons/github-brands.svg" alt="Logo Github" width="20px" />
         </a>
 
-        <a mat-button href="https://www.linkedin.com/in/edgar-benítez-valera-a191b0105" target="/blank"
-          class="navbar__nav-link" matTooltip="LinkedIn">
+        <a
+          mat-button
+          href="https://www.linkedin.com/in/edgar-benítez-valera-a191b0105"
+          target="/blank"
+          class="navbar__nav-link"
+          matTooltip="LinkedIn"
+        >
           <img src="./assets/icons/linkedin-brands.svg" alt="Logo LinkedIn" width="20px" />
         </a>
       </div>

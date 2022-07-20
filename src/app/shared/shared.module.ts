@@ -38,7 +38,7 @@ import { RouterModule } from '@angular/router';
 import { ImageSplashPipe } from './pipe/image-splash.pipe';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive';
-import { SwiperModule } from "swiper/angular";
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -137,4 +137,4 @@ import { SwiperModule } from "swiper/angular";
     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: CustomTooltipConfig },
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

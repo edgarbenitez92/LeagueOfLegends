@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ChampionsService } from 'src/app/core/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
-import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import { SwiperConfigModel } from 'src/app/shared/custom/custom-swiper-config';
 
 // SwiperCore.use([Pagination]);
@@ -14,8 +14,6 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
   templateUrl: './champion-detail.component.html',
   styleUrls: ['./champion-detail.component.scss'],
 })
-
-
 export class ChampionDetailComponent implements OnInit {
   champion!: Champion;
   version: string = '';
@@ -25,8 +23,8 @@ export class ChampionDetailComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private championService: ChampionsService,
-    private spinner: NgxSpinnerService,
-  ) { }
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ id }) => {
