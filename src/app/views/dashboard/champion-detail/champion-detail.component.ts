@@ -5,8 +5,8 @@ import { ChampionsService } from 'src/app/core/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
 import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import { SwiperConfigModel } from 'src/app/shared/custom/custom-swiper-config';
+import { Baron } from 'src/app/shared/mocks/baron.mock';
 
-// SwiperCore.use([Pagination]);
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 @Component({
@@ -42,6 +42,7 @@ export class ChampionDetailComponent implements OnInit {
       },
       error: (error) => {
         this.spinner.hide();
+        this.champion = Baron;
       },
       complete: () => this.spinner.hide(),
     });

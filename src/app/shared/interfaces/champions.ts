@@ -7,29 +7,27 @@ export interface Data {
 }
 
 export interface Champion {
-  version: string;
+  version?: string;
   id: string;
-  key: string;
+  key?: string;
   name: string;
   title: string;
-  blurb: string;
+  blurb?: string;
   lore: string;
   spells: Spell[];
   skins: Skin[];
-  passive: string;
-  info: Info;
-  image: Image;
+  passive?: string;
+  info?: Info;
+  image?: Image;
   tags: string;
-  partype: string;
-  stats: { [key: string]: number };
+  partype?: string;
+  stats?: { [key: string]: number };
 }
 
 export interface Skin {
-  // id  : number;
   urlImg: string;
   num: number;
   name: string;
-  // chromas : boolean;
 }
 
 export interface Spell {

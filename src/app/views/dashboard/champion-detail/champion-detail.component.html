@@ -3,8 +3,8 @@
     <swiper [config]="swiperConfig" class="swiper">
       <ng-template *ngFor="let skin of champion.skins" swiperSlide>
         <img
+          *ngIf="champion.id !== 'Baron'"
           class="mb-5"
-          style="position: sticky !important"
           [src]="
             'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' +
             champion.id +
@@ -14,6 +14,16 @@
           "
           alt="champion.name"
           id="SplashImg"
+          loading="lazy"
+        />
+
+        <!-- Show it when is a wrong path champion detail -->
+        <img
+          *ngIf="champion.id == 'Baron'"
+          class="mb-5"
+          [src]="skin.urlImg"
+          alt="champion.name"
+          id="BaronhImg"
           loading="lazy"
         />
       </ng-template>
@@ -35,7 +45,9 @@
       <div class="champion__specifications__body mt-2 mb-3">
         <h5 class="champion__specifications__body-title">{{ champion.title }}</h5>
         <p class="champion__specifications__body-lore">{{ champion.lore }}</p>
-        <h5 class="champion__specifications__body-spells">Spells description:</h5>
+        <h5 class="champion__specifications__body-spells" *ngIf="champion.id !== 'Baron'">
+          Spells description:
+        </h5>
       </div>
 
       <ul *ngFor="let spell of champion.spells">

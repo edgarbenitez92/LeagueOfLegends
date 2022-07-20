@@ -1,0 +1,36 @@
+.error__container {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(134, 186, 184, 0.8),
+      rgba(104, 91, 244, 0.8)
+    ),
+    url(../../assets/images/errorNotFound.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: 0 auto;
+
+  &__back__home {
+    background-color: transparent;
+    font-weight: bold;
+    transition: 250ms;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+}
+
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+  .error__container {
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 71%, 80% 100%, 20% 100%, 0 73%, 0 0);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 71%, 80% 100%, 20% 100%, 0 73%, 0 0);
+  }
+}

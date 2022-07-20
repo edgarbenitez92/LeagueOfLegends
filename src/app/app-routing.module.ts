@@ -7,6 +7,15 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
+  {
+    path: 'error',
+    loadChildren: () => import('./views/error/error.module').then((m) => m.ErrorModule),
+  },
+  {
+    path: '**',
+    redirectTo: '/error/not-found',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
