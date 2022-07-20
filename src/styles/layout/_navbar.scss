@@ -7,6 +7,11 @@
   &__nav {
     background-color: $color-tertiary-light;
 
+    &-title img {
+      width: 150px;
+      height: auto;
+    }
+
     &-toggle:hover {
       background-color: $color-secondary;
     }
