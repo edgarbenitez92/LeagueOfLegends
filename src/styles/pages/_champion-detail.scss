@@ -1,0 +1,118 @@
+.champion {
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__splash {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    max-width: 90%;
+  }
+
+  &__specifications {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+
+    &__titles {
+      display: flex;
+      justify-content: space-between;
+
+      &-name {
+        color: $color-white;
+      }
+
+      &-tags {
+        color: $color-tags;
+      }
+    }
+
+    &__body {
+      &-title {
+        margin-bottom: 15px;
+        color: $color-primary;
+      }
+
+      &-lore {
+        margin-bottom: 20px;
+        color: $color-white;
+      }
+
+      &-spells {
+        color: $color-primary;
+      }
+    }
+
+    &__spells {
+      display: grid;
+      grid-template-columns: 0.5fr 3fr;
+      grid-gap: 10px;
+      align-items: center;
+
+      &-image {
+        width: 60px;
+        height: 65px;
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      &-specifications {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        &-name {
+          color: $color-spell-name;
+          margin-bottom: 5px;
+        }
+
+        &-description {
+          color: $color-white;
+          width: 100%;
+          font-family: frizQuadrata;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+img#SplashImg {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  position: sticky;
+  top: 75px;
+
+  @media only screen and (min-width: 750px) {
+    min-width: 300px;
+  }
+}
+
+img#SpellName {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+img#BaronhImg {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  position: sticky;
+  top: 75px;
+  height: 545px;
+
+  @media only screen and (min-width: 750px) {
+    min-width: 300px;
+  }
+}

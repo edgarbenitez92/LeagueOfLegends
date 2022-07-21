@@ -1,0 +1,7 @@
+.dashboard {
+  background-color: $color-tertiary-dark;
+
+  &__champions {
+    min-height: calc(100vh - 64px);
+  }
+}

@@ -1,0 +1,19 @@
+// Prevents that the normal links color where Bootstrap's primary color
+a {
+  &.mat-button,
+  &.mat-raised-button,
+  &.mat-fab,
+  &.mat-mini-fab,
+  &.mat-list-item {
+    &:hover {
+      color: currentColor;
+    }
+  }
+}
+
+.mat-tooltip {
+  font-family: frizQuadrata, 'Helvetica Neue', sans-serif;
+  font-size: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

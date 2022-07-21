@@ -1,0 +1,16 @@
+<div class="splash">
+  <a [routerLink]="'../champion/' + champion.id" class="splash__champion">
+    <!-- Champion name -->
+    <h5 class="splash__champion-name">{{ champion.name | titlecase }}</h5>
+
+    <!-- Champion splash image -->
+    <div class="splash__champion-card">
+      <img
+        class="splash__champion-image"
+        [src]="champion.image"
+        alt="Splash {{ champion.name }}"
+        loading="lazy"
+      />
+    </div>
+  </a>
+</div>

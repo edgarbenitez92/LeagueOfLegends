@@ -1,0 +1,14 @@
+<main class="mini__icon">
+  <a [routerLink]="'../champion/' + champion.id" class="mini__icon__champion">
+    <!-- Icono champion image -->
+    <img
+      class="mini__icon__champion-image"
+      [src]="champion.miniImage"
+      alt="Mini {{ champion.name }}"
+      loading="lazy"
+    />
+
+    <!-- Champion Name -->
+    <h5 class="mini__icon__champion-name">{{ champion.name | titlecase }}</h5>
+  </a>
+</main>

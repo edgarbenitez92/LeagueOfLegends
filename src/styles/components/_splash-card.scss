@@ -1,0 +1,46 @@
+.splash {
+  background-color: $color-tertiary;
+  width: 170px;
+  height: auto;
+  padding: 8px;
+  margin: 4px;
+  transition: 250ms;
+  border-radius: 5px;
+
+  @media screen and (min-width: 800px) {
+    width: 180px;
+  }
+
+  &:hover {
+    background-color: $color-tertiary-dark;
+    transform: scale(1.05);
+  }
+
+  &__champion {
+    display: block;
+    text-decoration: none;
+
+    &-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-white;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    &-card {
+      height: 280px;
+      width: auto;
+
+      @media screen and (min-width: 800px) {
+        height: 300px;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}

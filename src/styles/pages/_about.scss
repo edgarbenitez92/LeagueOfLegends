@@ -1,0 +1,22 @@
+.about__container {
+  height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  color: $color-white;
+
+  &__msg {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    max-width: 650px;
+    background-color: $color-tertiary-dark;
+
+    &-link {
+      color: $color-primary;
+
+      &:visited {
+        color: $color-tertiary-light;
+      }
+    }
+  }
+}

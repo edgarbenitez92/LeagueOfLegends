@@ -1,0 +1,35 @@
+.navbar {
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  &__nav {
+    background-color: $color-tertiary-light;
+
+    &-title img {
+      width: 150px;
+      height: auto;
+    }
+
+    &-toggle:hover {
+      background-color: $color-secondary;
+    }
+
+    &-link {
+      transition: 250ms;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $color-secondary;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #navbar-title-lol {
+    display: none;
+  }
+}
