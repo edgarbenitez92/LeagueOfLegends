@@ -39,6 +39,7 @@ import { ImageSplashPipe } from './pipe/image-splash.pipe';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive';
 import { SwiperModule } from 'swiper/angular';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SwiperModule } from 'swiper/angular';
     ImageSplashPipe,
     // Directives
     LazyLoadingImgDirective,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -90,6 +92,7 @@ import { SwiperModule } from 'swiper/angular';
     NavbarComponent,
     MiniIconsChampionsComponent,
     SplashChampionComponent,
+    FooterComponent,
     // Modules
     CommonModule,
     RouterModule,
