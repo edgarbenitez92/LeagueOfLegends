@@ -1,27 +1,59 @@
-# LeagueOfLegends
+<p align="center">
+  <img src="./src/og-image.jpg.png"/>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+<p align="center">
+  <a href="http://commitizen.github.io/cz-cli/">
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"/>
+  </a>
+</p>
 
-## Development server
+# League of Legends - Angular
+[https://edgarbenitez92.github.io/LeagueofLegends/](https://edgarbenitez92.github.io/LeagueofLegends/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The Champions of the Summoner Rift built in Angular as a learning project.
 
-## Code scaffolding
+## ¿Do you like the summoner rift?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You will see all champions in the last version game - League of Legends.
 
-## Build
+You can click a champion for seeing his details like a:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Abilities**
+- **History**
+- **Type**
 
-## Running unit tests
+and more...
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development environment
 
-## Running end-to-end tests
+### Minimum requirements
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Nodejs (LTS)](https://nodejs.org/es/).
+- [Angular](https://angular.io/).
 
-## Further help
+Run in the root of the project:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```sh
+$ npm install
+$ ng serve
+```
+
+and enjoy it!!!
+
+## References
+
+### Development resources
+
+* [NPM](https://docs.npmjs.com/): NPM is the world's largest software registry.
+* [Angular](https://angular.io/): One framework.
+* [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/): Create a skeleton structure which is flexible for projects big or small.
+* [Google Font](https://fonts.google.com/): The web's most popular icon set and toolkit.
+* [Angular Material](https://material.angular.io/): A modern, Material Design components for Angular.
+* [Bootstrap](https://getbootstrap.com/): Powerful, extensible, and feature-packed frontend toolkit.
+* [Data Dragon - Riot Games](https://developer.riotgames.com/docs/lol): It is designed to help you begin developing your own tools and products for the League of Legends player community.
+* [League of Legends Font](https://thefontsmagazine.com/font/league-of-legends-font/): League of Legends Font is a logo font that we have seen in the game title. League of Legends is a multiplayer online video game developed and published by Riot Games for the first time in October 2009.
+* [Ngx Spinner](https://www.npmjs.com/package/ngx-spinner): An animated loading spinner for Angular 4+ versions that is intended to inform the user that an operation is in progress.
+* [Swiper](https://swiperjs.com/angular):  is the free and most modern mobile touch slider with hardware accelerated transitions and amazing native behavior.
+* [Husky - Git Hooks](https://typicode.github.io/husky/#/): Husky improves your commits and more 🐶 _woof_!
+- [Commitizen](https://github.com/commitizen/cz-cli): The commitizen command line utility.
