@@ -32,7 +32,8 @@
               "src/og-image.jpg",
               "src/404.html",
               "src/_redirects",
-              "src/og-image.png"
+              "src/og-image.jpg",
+              "src/og-image-twitter.jpg"
             ],
             "styles": [
               "src/styles.scss",
