@@ -9,7 +9,7 @@
 </p>
 
 # League of Legends - Angular
-[https://edgarbenitez92.github.io/LeagueofLegends/](https://edgarbenitez92.github.io/LeagueofLegends/)
+[https://league-of-legends-app.netlify.app/dashboard/home](https://league-of-legends-app.netlify.app/dashboard/home)
 
 The Champions of the Summoner Rift built in Angular as a learning project.
 
