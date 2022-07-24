@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ChampionsService } from 'src/app/core/champions/champions.service';
+import { ChampionsService } from 'src/app/core/services/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
 import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import { SwiperConfigModel } from 'src/app/shared/custom/custom-swiper-config';
