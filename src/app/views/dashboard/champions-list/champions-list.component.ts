@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { map, pluck } from 'rxjs';
-import { ChampionsService } from 'src/app/core/champions/champions.service';
+import { ChampionsService } from 'src/app/core/services/champions/champions.service';
 import { Champion } from 'src/app/shared/interfaces/champions';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-champions-list',
@@ -36,11 +37,11 @@ export class ChampionsListComponent implements OnInit {
           let championsArr: any = Object.values(data);
           for (let champion of championsArr) {
             const name = champion.name;
-            const image = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`;
+            const image = `${environment.apiBaseUrl}/img/champion/loading/${champion.id}_0.jpg`;
             const id = champion.id;
             const difficulty = champion.info.difficulty;
             const roles = champion.tags;
-            const miniImage = `https://ddragon.leagueoflegends.com/cdn/${champion.version}/img/champion/${champion.id}.png`;
+            const miniImage = `${environment.apiBaseUrl}/${champion.version}/img/champion/${champion.id}.png`;
             championsCards.push({ name, image, miniImage, id, difficulty, roles });
           }
           return championsCards;

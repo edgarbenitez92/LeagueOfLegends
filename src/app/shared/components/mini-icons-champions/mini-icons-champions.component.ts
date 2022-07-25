@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ChampionsService } from 'src/app/core/champions/champions.service';
+import { Component, Input } from '@angular/core';
+import { Champion } from '../../interfaces/champions';
 
 @Component({
   selector: 'app-mini-icons-champions',
@@ -7,9 +7,7 @@ import { ChampionsService } from 'src/app/core/champions/champions.service';
   styleUrls: ['./mini-icons-champions.component.scss'],
 })
 export class MiniIconsChampionsComponent {
-  @Input() champion!: any;
+  @Input() champion!: Champion;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

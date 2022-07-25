@@ -22,6 +22,7 @@ export interface Champion {
   tags: string;
   partype?: string;
   stats?: { [key: string]: number };
+  miniImage?: string;
 }
 
 export interface Skin {
