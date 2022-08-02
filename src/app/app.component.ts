@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'leagueOfLegends';
+  constructor(private swUpdate: SwUpdate) {}
+
+  ngOnInit(): void {
+    this.updatePWA();
+  }
+
+  updatePWA() {
+    this.swUpdate.activateUpdate().then((value) => {
+      window.location.reload();
+    });
+  }
 }
