@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { AppSettings } from 'src/app/shared/interfaces/app-settings.interface';
 import { environment } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable, Subject } from 'rxjs';
 
 const defaultAppSettings: AppSettings = {
-  // darkMode: false,
   language: navigator.language.substring(0, 2),
   api_language: 'en_US',
 };
@@ -14,6 +14,8 @@ const defaultAppSettings: AppSettings = {
 })
 export class AppSettingsService {
   appSettings: AppSettings = defaultAppSettings;
+  private hasNewLanguageSource: Subject<boolean> = new Subject();
+  public hasNewLanguage$: Observable<boolean> = this.hasNewLanguageSource.asObservable();
 
   constructor(private translateService: TranslateService) {}
 
@@ -38,6 +40,8 @@ export class AppSettingsService {
 
     if (language == 'en') this.appSettings.api_language = 'en_US';
     if (language == 'es') this.appSettings.api_language = 'es_ES';
+
+    this.hasNewLanguageSource.next(true);
   }
 
   private storeAppSettings() {

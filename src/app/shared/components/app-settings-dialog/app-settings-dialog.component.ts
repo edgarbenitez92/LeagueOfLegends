@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
-import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AppSettingsService } from 'src/app/core/services/app-settings/app-settings.service';
 import { SnackBarService } from '../../../core/services/snack-bar/snack-bar.service';
@@ -24,7 +23,6 @@ export class AppSettingsDialogComponent implements OnInit {
 
   constructor(
     private appSettingsService: AppSettingsService,
-    private route: Router,
     private snackBarService: SnackBarService,
     private translateService: TranslateService
   ) {
@@ -43,9 +41,5 @@ export class AppSettingsDialogComponent implements OnInit {
       return;
     }
     this.appSettingsService.toggleLanguage(value);
-
-    // Reload the champion details view
-    const { url } = this.route;
-    if (url.includes('champion')) window.location.reload();
   }
 }
