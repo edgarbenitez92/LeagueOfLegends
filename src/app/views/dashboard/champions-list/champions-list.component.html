@@ -4,14 +4,14 @@
 
     <mat-button-toggle-group class="champions__type-toggle" (change)="onSelectTypeView($event)">
       <mat-button-toggle
-        matTooltip="Mini Champions"
+        [matTooltip]="'MINI_CHAMPIONS' | translate"
         [ngClass]="{ checked: isInitView }"
         [checked]="isInitView"
       >
         <img src="./assets/icons/view_icon_list.svg" alt="mini_icon_view" />
       </mat-button-toggle>
       <mat-button-toggle
-        matTooltip="Splash Champions"
+        [matTooltip]="'SPLASH_CHAMPIONS' | translate"
         [ngClass]="{ checked: !isInitView }"
         [checked]="!isInitView"
       >

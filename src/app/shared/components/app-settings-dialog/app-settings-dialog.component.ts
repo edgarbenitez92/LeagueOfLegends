@@ -26,16 +26,15 @@ export class AppSettingsDialogComponent implements OnInit {
     private appSettingsService: AppSettingsService,
     private route: Router,
     private snackBarService: SnackBarService,
-    private translateService: TranslateService,
+    private translateService: TranslateService
   ) {
     const { language } = this.appSettingsService.getAppSettings();
     this.languageControl = new FormControl(language);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   setLanguage({ value }: MatSelectChange) {
-
     if (this.languageControl.value == value) {
       this.snackBarService.open(
         SnackBarStatesEnum.DANGER,

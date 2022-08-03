@@ -20,7 +20,7 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
       provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
       useValue: { horizontalPosition: 'end', verticalPosition: 'top', duration: 3500 },
     },
-  ]
+  ],
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

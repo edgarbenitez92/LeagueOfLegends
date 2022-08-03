@@ -4,11 +4,10 @@ import { SnackBarComponent } from 'src/app/shared/components/snack-bar/snack-bar
 import { SnackBarStatesEnum } from 'src/app/shared/enums/snack-bar-states.enum';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SnackBarService {
-
-  constructor(private matSnackBar: MatSnackBar) { }
+  constructor(private matSnackBar: MatSnackBar) {}
 
   open(state: SnackBarStatesEnum, text: string) {
     this.matSnackBar.openFromComponent(SnackBarComponent, {

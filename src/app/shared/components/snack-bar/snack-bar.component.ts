@@ -6,10 +6,9 @@ import { SnackBarData } from '../../interfaces/app-snack-bar-data.interface';
 @Component({
   selector: 'app-snack-bar',
   templateUrl: './snack-bar.component.html',
-  styleUrls: ['./snack-bar.component.scss']
+  styleUrls: ['./snack-bar.component.scss'],
 })
 export class SnackBarComponent implements OnInit {
-
   icon: string;
 
   constructor(
@@ -25,5 +24,5 @@ export class SnackBarComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
