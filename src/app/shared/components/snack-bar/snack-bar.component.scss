@@ -1,0 +1,30 @@
+.snack-bar-component {
+  button {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+}
+
+::ng-deep .success {
+  color: var(--bs-white) !important;
+  background-color: var(--bs-success) !important;
+
+  button {
+    color: var(--bs-white) !important;
+  }
+}
+
+::ng-deep .warning {
+  color: var(--bs-black) !important;
+  background-color: var(--bs-warning) !important;
+}
+
+::ng-deep .danger {
+  color: var(--bs-white) !important;
+  background-color: var(--bs-danger) !important;
+
+  button {
+    color: var(--bs-white) !important;
+  }
+}

@@ -42,6 +42,7 @@ import { SwiperModule } from 'swiper/angular';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppSettingsDialogComponent } from './components/app-settings-dialog/app-settings-dialog.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 @NgModule({
   declarations: [
@@ -49,12 +50,13 @@ import { TranslateModule } from '@ngx-translate/core';
     NavbarComponent,
     MiniIconsChampionsComponent,
     SplashChampionComponent,
+    AppSettingsDialogComponent,
+    SnackBarComponent,
     // Pipes
     ImageSplashPipe,
     // Directives
     LazyLoadingImgDirective,
     FooterComponent,
-    AppSettingsDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -97,6 +99,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MiniIconsChampionsComponent,
     SplashChampionComponent,
     FooterComponent,
+    SnackBarComponent,
+    AppSettingsDialogComponent,
     // Modules
     CommonModule,
     RouterModule,
@@ -145,4 +149,4 @@ import { TranslateModule } from '@ngx-translate/core';
     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: CustomTooltipConfig },
   ],
 })
-export class SharedModule {}
+export class SharedModule { }

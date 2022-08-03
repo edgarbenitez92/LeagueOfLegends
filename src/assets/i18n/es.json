@@ -1,4 +1,5 @@
 {
   "SETTINGS": "Configuraciones",
-  "CHAMPIONS_LIST": "Lista de Campeones"
+  "CHAMPIONS_LIST": "Lista de Campeones",
+  "WRONG_LANGUAGE_SELECTED": "Actualmente, la Webapp ya posee el idioma seleccionado"
 }
