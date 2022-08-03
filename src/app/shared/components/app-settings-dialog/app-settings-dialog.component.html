@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>{{ 'SETTINGS' | translate }}</h1>
+<div mat-dialog-content>
+  <mat-divider></mat-divider>
+  <mat-form-field class="d-block pt-3">
+    <mat-label>{{ 'LANGUAGE' | translate }}</mat-label>
+    <mat-select [formControl]="languageControl" (selectionChange)="setLanguage($event)">
+      <mat-option *ngFor="let language of languages" [value]="language.value">
+        {{ language.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button mat-dialog-close color="warn">{{ 'CLOSE' | translate }}</button>
+</div>

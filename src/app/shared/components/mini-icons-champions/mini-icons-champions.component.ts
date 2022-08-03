@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Champion } from '../../interfaces/champions';
+import { Champion } from '../../interfaces/champions.interface';
 
 @Component({
   selector: 'app-mini-icons-champions',
@@ -9,5 +9,5 @@ import { Champion } from '../../interfaces/champions';
 export class MiniIconsChampionsComponent {
   @Input() champion!: Champion;
 
-  constructor() {}
+  constructor() { }
 }

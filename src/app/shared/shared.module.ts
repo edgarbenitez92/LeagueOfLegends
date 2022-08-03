@@ -40,6 +40,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive';
 import { SwiperModule } from 'swiper/angular';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppSettingsDialogComponent } from './components/app-settings-dialog/app-settings-dialog.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -52,12 +54,14 @@ import { FooterComponent } from './components/footer/footer.component';
     // Directives
     LazyLoadingImgDirective,
     FooterComponent,
+    AppSettingsDialogComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     NgxSpinnerModule,
     SwiperModule,
+    TranslateModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -101,6 +105,7 @@ import { FooterComponent } from './components/footer/footer.component';
     // Libraries
     NgxSpinnerModule,
     SwiperModule,
+    TranslateModule,
     // Directives
     LazyLoadingImgDirective,
     // Material
@@ -140,4 +145,4 @@ import { FooterComponent } from './components/footer/footer.component';
     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: CustomTooltipConfig },
   ],
 })
-export class SharedModule {}
+export class SharedModule { }

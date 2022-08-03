@@ -3,7 +3,7 @@ import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { map, pluck } from 'rxjs';
 import { ChampionsService } from 'src/app/core/services/champions/champions.service';
-import { Champion } from 'src/app/shared/interfaces/champions';
+import { Champion } from 'src/app/shared/interfaces/champions.interface';
 import { environment } from 'src/environments/environment';
 
 @Component({
