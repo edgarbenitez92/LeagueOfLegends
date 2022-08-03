@@ -9,5 +9,5 @@ import { Champion } from '../../interfaces/champions.interface';
 export class MiniIconsChampionsComponent {
   @Input() champion!: Champion;
 
-  constructor() { }
+  constructor() {}
 }

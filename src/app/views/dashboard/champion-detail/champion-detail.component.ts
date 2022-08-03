@@ -19,6 +19,7 @@ export class ChampionDetailComponent implements OnInit {
   champion!: Champion;
   version: string = '';
   swiperConfig = SwiperConfigModel;
+  currentChampionId: string = '';
 
   constructor(
     private router: Router,
@@ -26,11 +27,12 @@ export class ChampionDetailComponent implements OnInit {
     private championService: ChampionsService,
     private spinner: NgxSpinnerService,
     private metaService: Meta
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ id }) => {
       this.getChampionDetailsById(id);
+      this.currentChampionId = id;
     });
   }
 

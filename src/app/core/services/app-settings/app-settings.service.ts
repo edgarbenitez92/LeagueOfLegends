@@ -6,16 +6,16 @@ import { TranslateService } from '@ngx-translate/core';
 const defaultAppSettings: AppSettings = {
   // darkMode: false,
   language: navigator.language.substring(0, 2),
+  api_language: 'en_US',
 };
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AppSettingsService {
-
   appSettings: AppSettings = defaultAppSettings;
 
-  constructor(private translateService: TranslateService) { }
+  constructor(private translateService: TranslateService) {}
 
   init() {
     const appSettings = localStorage.getItem(environment.localStorageKeys.appSettings);
@@ -35,6 +35,9 @@ export class AppSettingsService {
   private setLanguage(language: string = defaultAppSettings.language): void {
     this.translateService.use(language);
     this.appSettings.language = language;
+
+    if (language == 'en') this.appSettings.api_language = 'en_US';
+    if (language == 'es') this.appSettings.api_language = 'es_ES';
   }
 
   private storeAppSettings() {
@@ -44,4 +47,3 @@ export class AppSettingsService {
     );
   }
 }
-

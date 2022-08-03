@@ -8,7 +8,11 @@ import { translateModuleConfig } from './configs/translate-module.config';
 
 @NgModule({
   declarations: [],
-  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, TranslateModule.forRoot(translateModuleConfig),
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    TranslateModule.forRoot(translateModuleConfig),
   ],
 })
 export class CoreModule {

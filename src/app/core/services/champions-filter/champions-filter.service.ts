@@ -12,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
 export class ChampionsFilterService {
   private pathEnglishLanguage: string = 'data/en_US/champion';
 
-  constructor(private http: HttpClient, private summonerService: SummonerVersionService) { }
+  constructor(private http: HttpClient, private summonerService: SummonerVersionService) {}
 
   getAllChamps4Search(): Observable<Data> {
     return this.summonerService
