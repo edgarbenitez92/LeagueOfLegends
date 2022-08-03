@@ -1,5 +1,14 @@
 {
-  "SETTINGS": "Settings",
+  "ABOUT": "About me",
   "CHAMPIONS_LIST": "Champions List",
+  "CREDITS_LOL": "League of Legends and Riot Games are trademarks, service marks, and registered trademarks of Riot Games, Inc.",
+  "GITHUB": "Github",
+  "HOME": "Home",
+  "LINKED_IN": "LinkedIn",
+  "MENU": "Menu",
+  "MINI_CHAMPIONS": "Mini Champions",
+  "RETURN": "Return",
+  "SETTINGS": "Settings",
+  "SPLASH_CHAMPIONS": "Splash Champions",
   "WRONG_LANGUAGE_SELECTED": "Actually, the Webapp has the language selected"
 }
