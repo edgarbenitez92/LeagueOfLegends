@@ -7,14 +7,16 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private swUpdate: SwUpdate) {}
+  constructor(private swUpdate: SwUpdate) { }
 
   ngOnInit(): void {
     this.updatePWA();
   }
 
   updatePWA() {
-    this.swUpdate.activateUpdate().then((value) => {
+    if (!this.swUpdate.isEnabled) return;
+
+    this.swUpdate.activateUpdate().then(() => {
       window.location.reload();
     });
   }
