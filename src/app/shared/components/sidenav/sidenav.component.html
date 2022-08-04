@@ -1,5 +1,5 @@
 <mat-toolbar class="sidenav__title">
-  <span>Menu</span>
+  <span>{{ 'MENU' | translate }}</span>
 
   <button mat-icon-button class="sidenav__title__toggle" (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
@@ -9,7 +9,7 @@
 <mat-nav-list class="container container__menu">
   <a routerLink="./home" class="container__menu__titles" mat-list-item (click)="sidenav.toggle()">
     <mat-icon mat-list-icon>sync_alt</mat-icon>
-    <span>Champions List</span>
+    <span>{{ 'CHAMPIONS_LIST' | translate }}</span>
   </a>
 
   <!-- <a routerLink="./find" class="container__menu__titles" mat-list-item (click)="sidenav.toggle()">

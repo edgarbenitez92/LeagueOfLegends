@@ -42,8 +42,8 @@
     <br />
     <br />
     <div class="text-center">
-      <button mat-raised-button color="warn" (click)="back()" matTooltip="Return">
-        <mat-icon>reply_all</mat-icon> Return
+      <button mat-raised-button color="warn" (click)="back()" [matTooltip]="'RETURN' | translate">
+        <mat-icon>reply_all</mat-icon> {{ 'RETURN' | translate }}
       </button>
     </div>
   </article>

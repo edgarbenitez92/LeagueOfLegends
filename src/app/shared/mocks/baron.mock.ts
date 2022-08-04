@@ -1,4 +1,4 @@
-import { Champion, Skin, Tag } from '../interfaces/champions';
+import { Champion, Skin, Tag } from '../interfaces/champions.interface';
 
 const BaronSkins: Skin[] = [
   { urlImg: './assets/images/baronNashorSplash.jpg', name: 'Baron Nashor in Game', num: 1 },

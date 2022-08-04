@@ -40,6 +40,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { LazyLoadingImgDirective } from './directives/lazy-loading-img.directive';
 import { SwiperModule } from 'swiper/angular';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppSettingsDialogComponent } from './components/app-settings-dialog/app-settings-dialog.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     MiniIconsChampionsComponent,
     SplashChampionComponent,
+    AppSettingsDialogComponent,
+    SnackBarComponent,
     // Pipes
     ImageSplashPipe,
     // Directives
@@ -58,6 +63,7 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterModule,
     NgxSpinnerModule,
     SwiperModule,
+    TranslateModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
@@ -93,6 +99,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MiniIconsChampionsComponent,
     SplashChampionComponent,
     FooterComponent,
+    SnackBarComponent,
+    AppSettingsDialogComponent,
     // Modules
     CommonModule,
     RouterModule,
@@ -101,6 +109,7 @@ import { FooterComponent } from './components/footer/footer.component';
     // Libraries
     NgxSpinnerModule,
     SwiperModule,
+    TranslateModule,
     // Directives
     LazyLoadingImgDirective,
     // Material

@@ -36,7 +36,7 @@
           <small class="champion__specifications__titles-name">{{ champion.name }} </small>
           <small class="champion__specifications__titles-tags">({{ champion.tags }})</small>
         </h3>
-        <button mat-button color="warn" (click)="goHome()" matTooltip="Return">
+        <button mat-button color="warn" (click)="goHome()" [matTooltip]="'RETURN' | translate">
           <mat-icon>reply_all</mat-icon>
         </button>
       </div>
@@ -47,7 +47,7 @@
         <h5 class="champion__specifications__body-title">{{ champion.title }}</h5>
         <p class="champion__specifications__body-lore">{{ champion.lore }}</p>
         <h5 class="champion__specifications__body-spells" *ngIf="champion.id !== 'Baron'">
-          Spells description:
+          {{ 'SPELLS_DESCRIPTION' | translate }}:
         </h5>
       </div>
 

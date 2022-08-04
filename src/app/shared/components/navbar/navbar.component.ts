@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
+import { AppSettingsDialogComponent } from '../app-settings-dialog/app-settings-dialog.component';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {}
 
   openAppSettingsDialog() {
-    // this.dialog.open(AppSettingsDialogComponent);
+    this.dialog.open(AppSettingsDialogComponent);
   }
 }
