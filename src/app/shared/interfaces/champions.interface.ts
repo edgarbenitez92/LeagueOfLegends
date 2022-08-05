@@ -3,7 +3,7 @@ export interface Data {
   name: string;
   format: string;
   version: string;
-  data: { [key: string]: Champion };
+  data: { [name: string]: Champion };
 }
 
 export interface Champion {
@@ -23,6 +23,15 @@ export interface Champion {
   partype?: string;
   stats?: { [key: string]: number };
   miniImage?: string;
+}
+
+export interface CustomChampionData {
+  id: string;
+  name: string;
+  image?: string;
+  tags: string;
+  miniImage?: string;
+  difficulty: number
 }
 
 export interface Skin {
@@ -75,7 +84,3 @@ export enum Tag {
   Support = 'Support',
   Tank = 'Tank',
 }
-
-// export enum Version {
-//     The11101 = "11.10.1",
-// }

@@ -43,6 +43,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppSettingsDialogComponent } from './components/app-settings-dialog/app-settings-dialog.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     MatTooltipModule,
     MatButtonToggleModule,
     MatGridListModule,
+    MatAutocompleteModule,
   ],
   exports: [
     // Components
@@ -139,6 +141,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     MatTooltipModule,
     MatGridListModule,
     MatButtonToggleModule,
+    MatAutocompleteModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
@@ -149,4 +152,4 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: CustomTooltipConfig },
   ],
 })
-export class SharedModule {}
+export class SharedModule { }
