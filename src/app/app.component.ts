@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 
 @Component({
@@ -7,7 +7,7 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private swUpdate: SwUpdate) { }
+  constructor(private swUpdate: SwUpdate) {}
 
   ngOnInit(): void {
     this.updatePWA();
@@ -16,8 +16,12 @@ export class AppComponent {
   updatePWA() {
     if (!this.swUpdate.isEnabled) return;
 
-    this.swUpdate.activateUpdate().then(() => {
-      window.location.reload();
+    this.swUpdate.checkForUpdate().then((isUpdated) => {
+      if (isUpdated) {
+        this.swUpdate.activateUpdate().then(() => {
+          location.reload();
+        });
+      }
     });
   }
 }
