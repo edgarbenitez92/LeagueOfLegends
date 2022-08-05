@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ChampionsService } from 'src/app/core/services/champions/champions.service';
-import { Champion } from 'src/app/shared/interfaces/champions';
+import { Champion } from 'src/app/shared/interfaces/champions.interface';
 import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import { SwiperConfigModel } from 'src/app/shared/custom/custom-swiper-config';
 import { Baron } from 'src/app/shared/mocks/baron.mock';
 import { Meta } from '@angular/platform-browser';
+import { AppSettingsService } from '../../../core/services/app-settings/app-settings.service';
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -19,19 +20,25 @@ export class ChampionDetailComponent implements OnInit {
   champion!: Champion;
   version: string = '';
   swiperConfig = SwiperConfigModel;
+  currentChampionId: string = '';
+  private id!: string;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private championService: ChampionsService,
     private spinner: NgxSpinnerService,
-    private metaService: Meta
+    private metaService: Meta,
+    private appSettingsService: AppSettingsService
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ id }) => {
+      this.id = id;
       this.getChampionDetailsById(id);
     });
+
+    this.appSettingsService.hasNewLanguage$.subscribe(() => this.getChampionDetailsById(this.id));
   }
 
   getChampionDetailsById(id: string) {

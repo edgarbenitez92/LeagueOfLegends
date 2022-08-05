@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import { AppSettingsService } from './core/services/app-settings/app-settings.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  constructor(private swUpdate: SwUpdate) {}
+export class AppComponent implements OnInit {
+  constructor(private appSettingsService: AppSettingsService, private swUpdate: SwUpdate) {}
 
   ngOnInit(): void {
+    this.appSettingsService.init();
     this.updatePWA();
   }
 
