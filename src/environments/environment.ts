@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
   apiBaseUrl: 'https://ddragon.leagueoflegends.com/cdn',
+  localStorageKeys: {
+    appSettings: 'app-settings-dev',
+  },
 };
 
 /*
