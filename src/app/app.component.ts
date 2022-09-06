@@ -7,7 +7,9 @@ import { AppSettingsService } from './core/services/app-settings/app-settings.se
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private appSettingsService: AppSettingsService) {}
+  title = 'League of Legends';
+
+  constructor(private appSettingsService: AppSettingsService) { }
 
   ngOnInit(): void {
     this.appSettingsService.init();

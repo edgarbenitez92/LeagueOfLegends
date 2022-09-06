@@ -9,9 +9,8 @@ import { of } from 'rxjs';
 import { championData } from './mock/champion-data';
 import { SnackBarService } from '../../../core/services/snack-bar/snack-bar.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
 
-fdescribe('ChampionsListComponent', () => {
+describe('ChampionsListComponent', () => {
   let component: ChampionsListComponent;
   let fixture: ComponentFixture<ChampionsListComponent>;
   let toggleEvent: boolean;
