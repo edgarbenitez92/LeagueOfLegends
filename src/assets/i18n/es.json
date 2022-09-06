@@ -4,6 +4,7 @@
   "BACK_TO_NEXUS": "Regresar al Nexus",
   "CHAMPIONS_LIST": "Lista de Campeones",
   "CREDITS_LOL": "League of Legends y Riot Games son marcas comerciales, marcas de servicio, y marcas registradas de Riot Games, Inc.",
+  "ERROR_GET_CHAMPIONS": "Error en tomar los campeones desde el servidor",
   "GITHUB": "Github",
   "HOME": "Casa",
   "LINKED_IN": "LinkedIn",

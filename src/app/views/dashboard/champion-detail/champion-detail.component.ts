@@ -30,7 +30,7 @@ export class ChampionDetailComponent implements OnInit {
     private spinner: NgxSpinnerService,
     private metaService: Meta,
     private appSettingsService: AppSettingsService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ id }) => {
@@ -69,7 +69,7 @@ export class ChampionDetailComponent implements OnInit {
 
   updateMetaTags(champion: Champion, isGoingHome: boolean = false) {
     if (isGoingHome) {
-      this.metaService.updateTag({ property: 'og:title', content: 'LeagueOfLegends | Angular' });
+      this.metaService.updateTag({ property: 'og:title', content: 'League of Legends | Angular' });
 
       this.metaService.updateTag({
         property: 'og:image',
@@ -85,7 +85,7 @@ export class ChampionDetailComponent implements OnInit {
 
       this.metaService.updateTag({
         property: 'og:title',
-        content: name + ' ' + title + ' ' + '| LeagueOfLegends',
+        content: name + ' ' + title + ' ' + '| League of Legends',
       });
 
       this.metaService.updateTag({
