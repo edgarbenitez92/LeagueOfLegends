@@ -2,13 +2,26 @@
   <div class="champions__type">
     <h1 class="champions__type-title mb-3">{{ 'CHAMPIONS_LIST' | translate }}</h1>
 
-    <mat-button-toggle-group class="champions__type-toggle" (change)="onSelectTypeView($event.value)">
-      <mat-button-toggle [matTooltip]="'MINI_CHAMPIONS' | translate" [ngClass]="{ checked: isInitView }" [value]="true"
-        [checked]="isInitView">
+    <mat-button-toggle-group
+      id="legalGuardian"
+      class="champions__type-toggle"
+      (change)="onSelectTypeView($event.value)"
+    >
+      <mat-button-toggle
+        [matTooltip]="'MINI_CHAMPIONS' | translate"
+        [ngClass]="{ checked: isInitView }"
+        [value]="true"
+        [checked]="isInitView"
+      >
         <img src="./assets/icons/view_icon_list.svg" alt="mini_icon_view" />
       </mat-button-toggle>
-      <mat-button-toggle [matTooltip]="'SPLASH_CHAMPIONS' | translate" [ngClass]="{ checked: !isInitView }"
-        [value]="false" [checked]="!isInitView">
+      <mat-button-toggle
+        id="prueba"
+        [matTooltip]="'SPLASH_CHAMPIONS' | translate"
+        [ngClass]="{ checked: !isInitView }"
+        [value]="false"
+        [checked]="!isInitView"
+      >
         <img src="./assets/icons/view_column_list.svg" alt="splash_view" />
       </mat-button-toggle>
     </mat-button-toggle-group>

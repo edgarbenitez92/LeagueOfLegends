@@ -11,12 +11,11 @@ import { AppSettingsService } from '../app-settings/app-settings.service';
   providedIn: 'root',
 })
 export class ChampionsService {
-
   constructor(
     private http: HttpClient,
     private summonerService: SummonerVersionService,
     private appSettings: AppSettingsService
-  ) { }
+  ) {}
 
   getChampions(): Observable<any> {
     return this.summonerService

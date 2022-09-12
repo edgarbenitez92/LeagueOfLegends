@@ -8,7 +8,7 @@ import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 class FakeRouter {
-  navigate(params: any[]): void { }
+  navigate(params: any[]): void {}
 }
 
 fdescribe('MiniIconsChampionsComponent', () => {
@@ -47,6 +47,6 @@ fdescribe('MiniIconsChampionsComponent', () => {
     const router: Router = TestBed.inject(Router);
     const spy = spyOn(router, 'navigate');
     component.goToChampionDetails(component.champion.id);
-    expect(spy).toHaveBeenCalledWith(['dashboard/champion/Amumu'])
+    expect(spy).toHaveBeenCalledWith(['dashboard/champion/Amumu']);
   });
 });

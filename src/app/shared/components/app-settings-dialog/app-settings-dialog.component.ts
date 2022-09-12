@@ -30,7 +30,7 @@ export class AppSettingsDialogComponent implements OnInit {
     this.languageControl = new FormControl(language);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   setLanguage({ value }: MatSelectChange) {
     if (this.languageControl.value == value) {

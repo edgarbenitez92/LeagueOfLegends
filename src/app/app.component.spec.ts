@@ -20,10 +20,10 @@ fdescribe('AppComponent', () => {
       imports: [
         RouterTestingModule.withRoutes([]),
         HttpClientModule,
-        TranslateModule.forRoot(translateModuleConfig)
+        TranslateModule.forRoot(translateModuleConfig),
       ],
       providers: [AppSettingsService, TranslateService],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

@@ -10,9 +10,9 @@ import { Champion } from '../../interfaces/champions.interface';
 export class SplashChampionComponent implements OnInit {
   @Input() champion!: Champion;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   goToChampionDetails(championName: string) {
     this.route.navigate([`dashboard/champion/${championName}`]);

@@ -15,16 +15,14 @@ fdescribe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        DashboardComponent,
-      ],
+      declarations: [DashboardComponent],
       imports: [
         HttpClientModule,
         BrowserAnimationsModule,
         TranslateModule.forRoot(translateModuleConfig),
-        RouterTestingModule.withRoutes([])
+        RouterTestingModule.withRoutes([]),
       ],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DashboardComponent);

@@ -9,7 +9,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class SidenavComponent implements OnInit {
   @Input() sidenav!: MatSidenav;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

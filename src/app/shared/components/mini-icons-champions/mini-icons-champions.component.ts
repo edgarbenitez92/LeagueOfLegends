@@ -10,7 +10,7 @@ import { Champion } from '../../interfaces/champions.interface';
 export class MiniIconsChampionsComponent {
   @Input() champion!: Champion;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {}
 
   goToChampionDetails(championName: string) {
     this.route.navigate([`dashboard/champion/${championName}`]);

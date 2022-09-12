@@ -26,4 +26,4 @@ export const dashboardRoutes: Routes = [
   imports: [RouterModule.forChild(dashboardRoutes)],
   exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {}

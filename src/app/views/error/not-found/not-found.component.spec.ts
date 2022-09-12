@@ -12,10 +12,7 @@ fdescribe('NotFoundComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [NotFoundComponent],
-      imports: [
-        HttpClientModule,
-        TranslateModule.forRoot(translateModuleConfig)
-      ],
+      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NotFoundComponent);

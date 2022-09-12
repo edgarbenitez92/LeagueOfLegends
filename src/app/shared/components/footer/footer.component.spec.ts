@@ -12,10 +12,7 @@ fdescribe('FooterComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [FooterComponent],
-      imports: [
-        HttpClientModule,
-        TranslateModule.forRoot(translateModuleConfig)
-      ]
+      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FooterComponent);

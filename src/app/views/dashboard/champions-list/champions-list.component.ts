@@ -22,7 +22,7 @@ export class ChampionsListComponent implements OnInit {
     private championsService: ChampionsService,
     private spinner: NgxSpinnerService,
     private snackBarService: SnackBarService,
-    private translateService: TranslateService,
+    private translateService: TranslateService
   ) {
     this.isInitView = true;
   }

@@ -29,7 +29,7 @@ export class ChampionDetailComponent implements OnInit {
     private spinner: NgxSpinnerService,
     private metaService: Meta,
     private appSettingsService: AppSettingsService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ id }) => {

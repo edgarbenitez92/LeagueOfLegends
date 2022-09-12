@@ -43,6 +43,6 @@ fdescribe('SplashChampionComponent', () => {
     const router: Router = TestBed.inject(Router);
     const spy = spyOn(router, 'navigate');
     component.goToChampionDetails(component.champion.id);
-    expect(spy).toHaveBeenCalledWith(['dashboard/champion/Amumu'])
+    expect(spy).toHaveBeenCalledWith(['dashboard/champion/Amumu']);
   });
 });

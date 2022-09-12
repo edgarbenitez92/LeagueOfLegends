@@ -1,8 +1,8 @@
-import { ChampionsService } from "./champions.service";
+import { ChampionsService } from './champions.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SummonerVersionService } from '../summoner-version/summoner-version.service';
 import { AppSettingsService } from '../app-settings/app-settings.service';
-import { TestBed } from "@angular/core/testing";
+import { TestBed } from '@angular/core/testing';
 
 fdescribe('ChampionsService', () => {
   let service: ChampionsService;
@@ -13,12 +13,11 @@ fdescribe('ChampionsService', () => {
   beforeEach(async () => {
     service = new ChampionsService(httpClient, summoner, translate);
     TestBed.configureTestingModule({
-      imports: [HttpClientModule]
+      imports: [HttpClientModule],
     });
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
 });

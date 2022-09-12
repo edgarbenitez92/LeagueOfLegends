@@ -11,7 +11,7 @@ import { mockAmumu } from './mock/champion-detail.mock';
 import { By } from '@angular/platform-browser';
 
 class FakeRouter {
-  navigate(params: Params) { };
+  navigate(params: Params) {}
 }
 
 class FakeActivatedRoute {
@@ -36,16 +36,13 @@ fdescribe('ChampionDetailComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ChampionDetailComponent],
-      imports: [
-        HttpClientModule,
-        TranslateModule.forRoot(translateModuleConfig),
-      ],
+      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
       providers: [
         ChampionsService,
         { provide: Router, useClass: FakeRouter },
-        { provide: ActivatedRoute, useClass: FakeActivatedRoute }
+        { provide: ActivatedRoute, useClass: FakeActivatedRoute },
       ],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ChampionDetailComponent);

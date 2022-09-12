@@ -23,9 +23,9 @@ fdescribe('AppSettingsDialogComponent', () => {
         MatFormFieldModule,
         MatInputModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
       ],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppSettingsDialogComponent);

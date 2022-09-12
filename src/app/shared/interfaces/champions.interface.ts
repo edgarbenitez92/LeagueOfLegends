@@ -16,7 +16,7 @@ export interface Champion {
   lore: string;
   spells?: Spell[];
   skins: Skin[];
-  passive?: { name: string, description: string };
+  passive?: { name: string; description: string };
   info?: Info;
   image?: Image;
   tags?: Tag;

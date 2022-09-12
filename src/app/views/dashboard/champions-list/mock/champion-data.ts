@@ -1,32 +1,30 @@
 export const championData = {
   data: {
     Aatrox: {
-      version: "12.16.1",
-      id: "Aatrox",
-      key: "266",
-      name: "Aatrox",
-      title: "the Darkin Blade",
-      blurb: "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find...",
+      version: '12.16.1',
+      id: 'Aatrox',
+      key: '266',
+      name: 'Aatrox',
+      title: 'the Darkin Blade',
+      blurb:
+        'Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find...',
       info: {
         attack: 8,
         defense: 4,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
-        full: "Aatrox.png",
-        sprite: "champion0.png",
-        group: "champion",
+        full: 'Aatrox.png',
+        sprite: 'champion0.png',
+        group: 'champion',
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
-      tags: [
-        "Fighter",
-        "Tank"
-      ],
-      partype: "Blood Well",
+      tags: ['Fighter', 'Tank'],
+      partype: 'Blood Well',
       stats: {
         hp: 650,
         hpperlevel: 114,
@@ -47,8 +45,8 @@ export const championData = {
         attackdamage: 60,
         attackdamageperlevel: 5,
         attackspeedperlevel: 2.5,
-        attackspeed: 0.651
-      }
-    }
-  }
+        attackspeed: 0.651,
+      },
+    },
+  },
 };

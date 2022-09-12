@@ -9,7 +9,7 @@ import { AppSettingsService } from './core/services/app-settings/app-settings.se
 export class AppComponent implements OnInit {
   title = 'League of Legends';
 
-  constructor(private appSettingsService: AppSettingsService) { }
+  constructor(private appSettingsService: AppSettingsService) {}
 
   ngOnInit(): void {
     this.initSettingsService();

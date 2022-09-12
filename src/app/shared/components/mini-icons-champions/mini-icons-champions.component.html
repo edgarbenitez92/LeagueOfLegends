@@ -1,7 +1,12 @@
 <figure class="mini__icon" (click)="goToChampionDetails(champion.id)">
   <div class="mini__icon__champion">
     <!-- Icono champion image -->
-    <img class="mini__icon__champion-image" [src]="champion.miniImage" alt="Mini {{ champion.name }}" loading="lazy" />
+    <img
+      class="mini__icon__champion-image"
+      [src]="champion.miniImage"
+      alt="Mini {{ champion.name }}"
+      loading="lazy"
+    />
     <!-- Champion Name -->
     <h5 class="mini__icon__champion-name">{{ champion.name | titlecase }}</h5>
   </div>

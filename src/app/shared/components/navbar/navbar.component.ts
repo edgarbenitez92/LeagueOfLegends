@@ -11,10 +11,9 @@ import { AppSettingsDialogComponent } from '../app-settings-dialog/app-settings-
 export class NavbarComponent implements OnInit {
   @Input() sidenav!: MatSidenav;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   openAppSettingsDialog() {
     this.dialog.open(AppSettingsDialogComponent);

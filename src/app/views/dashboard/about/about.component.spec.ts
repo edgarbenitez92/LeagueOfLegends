@@ -8,7 +8,7 @@ import { translateModuleConfig } from 'src/app/core/configs/translate-module.con
 import { AboutComponent } from './about.component';
 
 class FakeRouter {
-  navigate() { };
+  navigate() {}
 }
 
 fdescribe('AboutComponent', () => {
@@ -18,14 +18,9 @@ fdescribe('AboutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutComponent],
-      imports: [
-        HttpClientModule,
-        TranslateModule.forRoot(translateModuleConfig),
-      ],
-      providers: [
-        { provide: Router, useClass: FakeRouter }
-      ],
-      schemas: [NO_ERRORS_SCHEMA]
+      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
+      providers: [{ provide: Router, useClass: FakeRouter }],
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutComponent);
