@@ -2,31 +2,17 @@
   <div class="champion">
     <swiper [config]="swiperConfig" class="swiper">
       <ng-template *ngFor="let skin of champion.skins" swiperSlide>
-        <img
-          *ngIf="champion.id !== 'Baron'"
-          class="mb-5"
-          [src]="
+        <img *ngIf="champion.id !== 'Baron'" class="mb-5" [src]="
             'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' +
             champion.id +
             '_' +
             skin.num +
             '.jpg'
-          "
-          alt="champion.name"
-          (error)="imageNotFound($event)"
-          id="SplashImg"
-          loading="lazy"
-        />
+          " alt="champion.name" (error)="imageNotFound($event)" id="SplashImg" loading="lazy" />
 
         <!-- Show it when is a wrong path champion detail -->
-        <img
-          *ngIf="champion.id == 'Baron'"
-          class="mb-5"
-          [src]="skin.urlImg"
-          alt="champion.name"
-          id="BaronhImg"
-          loading="lazy"
-        />
+        <img *ngIf="champion.id == 'Baron'" class="mb-5" [src]="skin.urlImg" alt="champion.name" id="BaronhImg"
+          loading="lazy" />
       </ng-template>
     </swiper>
 
@@ -54,18 +40,12 @@
       <ul *ngFor="let spell of champion.spells">
         <li class="champion__specifications__spells">
           <div class="champion__specifications__spells-image">
-            <img
-              [src]="
+            <img [src]="
                 'https://ddragon.leagueoflegends.com/cdn/' +
                 version +
                 '/img/spell/' +
                 spell.image.full
-              "
-              alt="{{ spell.name }}"
-              id="SpellName"
-              (error)="imageNotFound($event)"
-              loading="lazy"
-            />
+              " alt="{{ spell.name }}" id="SpellName" (error)="imageNotFound($event)" loading="lazy" />
           </div>
           <div class="champion__specifications__spells-specifications">
             <h5 class="champion__specifications__spells-specifications-name">
