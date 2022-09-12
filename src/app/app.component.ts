@@ -8,9 +8,13 @@ import { AppSettingsService } from './core/services/app-settings/app-settings.se
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private appSettingsService: AppSettingsService, private swUpdate: SwUpdate) {}
+  constructor(private appSettingsService: AppSettingsService, private swUpdate: SwUpdate) { }
 
   ngOnInit(): void {
+    this.initSettingsService();
+  }
+
+  initSettingsService() {
     this.appSettingsService.init();
     this.updatePWA();
   }

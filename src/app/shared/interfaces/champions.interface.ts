@@ -14,19 +14,19 @@ export interface Champion {
   title: string;
   blurb?: string;
   lore: string;
-  spells: Spell[];
+  spells?: Spell[];
   skins: Skin[];
-  passive?: string;
+  passive?: { name: string; description: string };
   info?: Info;
   image?: Image;
-  tags: string;
+  tags?: Tag;
   partype?: string;
   stats?: { [key: string]: number };
   miniImage?: string;
 }
 
 export interface Skin {
-  urlImg: string;
+  urlImg?: string;
   num: number;
   name: string;
 }

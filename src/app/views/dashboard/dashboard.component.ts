@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   opened: boolean = false;
-  menu: string[] = [];
 
   constructor() {}
 

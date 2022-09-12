@@ -5,7 +5,7 @@ import { ChampionsListComponent } from './champions-list/champions-list.componen
 import { ChampionDetailComponent } from './champion-detail/champion-detail.component';
 import { AboutComponent } from './about/about.component';
 
-const routes: Routes = [
+export const dashboardRoutes: Routes = [
   {
     path: '',
     redirectTo: '/dashboard/home',
@@ -23,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(dashboardRoutes)],
   exports: [RouterModule],
 })
 export class DashboardRoutingModule {}

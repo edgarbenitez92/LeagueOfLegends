@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
+import { TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { map, pluck } from 'rxjs';
 import { ChampionsService } from 'src/app/core/services/champions/champions.service';
+import { SnackBarStatesEnum } from 'src/app/shared/enums/snack-bar-states.enum';
 import { Champion } from 'src/app/shared/interfaces/champions.interface';
 import { environment } from 'src/environments/environment';
+import { SnackBarService } from '../../../core/services/snack-bar/snack-bar.service';
 
 @Component({
   selector: 'app-champions-list',
@@ -13,11 +16,14 @@ import { environment } from 'src/environments/environment';
 })
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];
-  typeImage: string = 'splash';
-
   isInitView: boolean;
 
-  constructor(private championsService: ChampionsService, private spinner: NgxSpinnerService) {
+  constructor(
+    private championsService: ChampionsService,
+    private spinner: NgxSpinnerService,
+    private snackBarService: SnackBarService,
+    private translateService: TranslateService
+  ) {
     this.isInitView = true;
   }
 
@@ -51,12 +57,17 @@ export class ChampionsListComponent implements OnInit {
         next: (champions: any) => (this.champions = champions),
         error: (error) => {
           this.spinner.hide();
+          this.snackBarService.open(
+            SnackBarStatesEnum.DANGER,
+            this.translateService.instant('ERROR_GET_CHAMPIONS')
+          );
         },
         complete: () => this.spinner.hide(),
       });
   }
 
-  onSelectTypeView({ source: { checked } }: MatButtonToggleChange) {
-    this.isInitView = !this.isInitView;
+  onSelectTypeView(value: boolean): boolean {
+    this.isInitView = value;
+    return this.isInitView;
   }
 }

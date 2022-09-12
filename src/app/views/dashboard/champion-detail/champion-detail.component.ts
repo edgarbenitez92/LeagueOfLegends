@@ -20,8 +20,7 @@ export class ChampionDetailComponent implements OnInit {
   champion!: Champion;
   version: string = '';
   swiperConfig = SwiperConfigModel;
-  currentChampionId: string = '';
-  private id!: string;
+  id!: string;
 
   constructor(
     private router: Router,
@@ -44,7 +43,7 @@ export class ChampionDetailComponent implements OnInit {
   getChampionDetailsById(id: string) {
     this.spinner.show();
 
-    return this.championService.getChampionById(id).subscribe({
+    this.championService.getChampionById(id).subscribe({
       next: ({ data, version }) => {
         this.version = version;
         for (let championName in data) this.champion = data[championName];
@@ -69,7 +68,7 @@ export class ChampionDetailComponent implements OnInit {
 
   updateMetaTags(champion: Champion, isGoingHome: boolean = false) {
     if (isGoingHome) {
-      this.metaService.updateTag({ property: 'og:title', content: 'LeagueOfLegends | Angular' });
+      this.metaService.updateTag({ property: 'og:title', content: 'League of Legends | Angular' });
 
       this.metaService.updateTag({
         property: 'og:image',
@@ -85,7 +84,7 @@ export class ChampionDetailComponent implements OnInit {
 
       this.metaService.updateTag({
         property: 'og:title',
-        content: name + ' ' + title + ' ' + '| LeagueOfLegends',
+        content: name + ' ' + title + ' ' + '| League of Legends',
       });
 
       this.metaService.updateTag({
