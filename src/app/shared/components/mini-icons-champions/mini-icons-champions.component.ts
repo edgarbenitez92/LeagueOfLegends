@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Champion } from '../../interfaces/champions.interface';
 
 @Component({
@@ -9,5 +10,9 @@ import { Champion } from '../../interfaces/champions.interface';
 export class MiniIconsChampionsComponent {
   @Input() champion!: Champion;
 
-  constructor() {}
+  constructor(private route: Router) { }
+
+  goToChampionDetails(championName: string) {
+    this.route.navigate([`dashboard/champion/${championName}`]);
+  }
 }
