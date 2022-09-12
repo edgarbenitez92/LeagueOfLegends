@@ -17,7 +17,19 @@ fdescribe('ChampionsService', () => {
     });
   });
 
-  it('should be created', () => {
+  it('It should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('It should call the get champion request', () => {
+    const spy = spyOn(service, 'getChampions');
+    service.getChampions();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('It should call the get champion by id request', () => {
+    const spy = spyOn(service, 'getChampionById');
+    service.getChampionById('Aatrox');
+    expect(spy).toHaveBeenCalled();
   });
 });
