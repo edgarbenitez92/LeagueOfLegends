@@ -12,6 +12,10 @@ export class AppComponent implements OnInit {
   constructor(private appSettingsService: AppSettingsService) { }
 
   ngOnInit(): void {
+    this.initSettingsService();
+  }
+
+  initSettingsService() {
     this.appSettingsService.init();
   }
 }
