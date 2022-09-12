@@ -21,11 +21,7 @@ fdescribe('SnackBarService', () => {
 
   it('It should call the open snack bar', () => {
     const spy = spyOn(snackBarService, 'open');
-    snackBarService.open(
-      SnackBarStatesEnum.DANGER,
-      'Testing Snack bar'
-    );
+    snackBarService.open(SnackBarStatesEnum.DANGER, 'Testing Snack bar');
     expect(spy).toHaveBeenCalled();
   });
-
 });

@@ -1,4 +1,4 @@
-import { AppSettings } from "src/app/shared/interfaces/app-settings.interface";
+import { AppSettings } from 'src/app/shared/interfaces/app-settings.interface';
 
 export const mockSettings: AppSettings = {
   language: navigator.language.substring(0, 2),
