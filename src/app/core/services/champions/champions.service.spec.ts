@@ -3,11 +3,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SummonerVersionService } from '../summoner-version/summoner-version.service';
 import { AppSettingsService } from '../app-settings/app-settings.service';
 import { TestBed } from "@angular/core/testing";
-import { TranslateService } from "@ngx-translate/core";
 
-
-describe('ChampionsService', () => {
-
+fdescribe('ChampionsService', () => {
   let service: ChampionsService;
   let summoner: SummonerVersionService;
   let httpClient: HttpClient;
