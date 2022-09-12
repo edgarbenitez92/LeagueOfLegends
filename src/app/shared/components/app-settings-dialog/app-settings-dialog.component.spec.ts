@@ -33,7 +33,7 @@ fdescribe('AppSettingsDialogComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  xit('it should create the component', () => {
+    expect(component).toBeTruthy();
+  });
 });
