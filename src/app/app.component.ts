@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 import { AppSettingsService } from './core/services/app-settings/app-settings.service';
 
 @Component({
@@ -7,9 +8,7 @@ import { AppSettingsService } from './core/services/app-settings/app-settings.se
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'League of Legends';
-
-  constructor(private appSettingsService: AppSettingsService) {}
+  constructor(private appSettingsService: AppSettingsService, private swUpdate: SwUpdate) { }
 
   ngOnInit(): void {
     this.initSettingsService();
@@ -17,5 +16,18 @@ export class AppComponent implements OnInit {
 
   initSettingsService() {
     this.appSettingsService.init();
+    this.updatePWA();
+  }
+
+  updatePWA() {
+    if (!this.swUpdate.isEnabled) return;
+
+    this.swUpdate.checkForUpdate().then((isUpdated) => {
+      if (isUpdated) {
+        this.swUpdate.activateUpdate().then(() => {
+          location.reload();
+        });
+      }
+    });
   }
 }
