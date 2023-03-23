@@ -8,13 +8,13 @@ import { translateModuleConfig } from 'src/app/core/configs/translate-module.con
 import { Observable, of, EMPTY, throwError } from 'rxjs';
 import { championData } from './mock/champion-data';
 import { SnackBarService } from '../../../core/services/snack-bar/snack-bar.service';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SnackBarStatesEnum } from 'src/app/shared/enums/snack-bar-states.enum';
 import { By } from '@angular/platform-browser';
 import { MatButtonToggleGroup, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { MiniIconsChampionsComponent } from '../../../shared/components/mini-icons-champions/mini-icons-champions.component';
 import { RouterTestingModule } from '@angular/router/testing';

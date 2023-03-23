@@ -1,7 +1,7 @@
 import { Overlay } from '@angular/cdk/overlay';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog, MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from './navbar.component';
 import { translateModuleConfig } from 'src/app/core/configs/translate-module.config';

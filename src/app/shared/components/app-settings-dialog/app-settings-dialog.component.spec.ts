@@ -3,11 +3,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AppSettingsDialogComponent } from './app-settings-dialog.component';
 import { translateModuleConfig } from 'src/app/core/configs/translate-module.config';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { MatInputModule } from '@angular/material/input';
+import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
 
 fdescribe('AppSettingsDialogComponent', () => {
   let component: AppSettingsDialogComponent;
