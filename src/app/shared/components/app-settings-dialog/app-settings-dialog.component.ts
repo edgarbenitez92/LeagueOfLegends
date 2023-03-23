@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 import { TranslateService } from '@ngx-translate/core';
 import { AppSettingsService } from 'src/app/core/services/app-settings/app-settings.service';
@@ -12,7 +12,7 @@ import { SnackBarStatesEnum } from '../../enums/snack-bar-states.enum';
   styleUrls: ['./app-settings-dialog.component.scss'],
 })
 export class AppSettingsDialogComponent implements OnInit {
-  languageControl: FormControl;
+  languageControl: UntypedFormControl;
 
   languages = [
     { label: 'English', value: 'en' },
@@ -27,7 +27,7 @@ export class AppSettingsDialogComponent implements OnInit {
     private translateService: TranslateService
   ) {
     const { language } = this.appSettingsService.getAppSettings();
-    this.languageControl = new FormControl(language);
+    this.languageControl = new UntypedFormControl(language);
   }
 
   ngOnInit(): void {}
