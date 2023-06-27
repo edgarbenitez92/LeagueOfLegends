@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { SnackBarService } from './snack-bar.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { SnackBarStatesEnum } from 'src/app/shared/enums/snack-bar-states.enum';
 
 fdescribe('SnackBarService', () => {

@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { throwIfAlreadyLoaded } from './guards/module-import.guard';
 import { TranslateModule } from '@ngx-translate/core';
 import { translateModuleConfig } from './configs/translate-module.config';
-import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MAT_LEGACY_SNACK_BAR_DEFAULT_OPTIONS as MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/legacy-snack-bar';
 
 @NgModule({
   declarations: [],
