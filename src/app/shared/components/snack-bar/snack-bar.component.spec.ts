@@ -2,7 +2,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SnackBarComponent } from './snack-bar.component';
-import { MatSnackBarRef, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatLegacySnackBarRef as MatSnackBarRef, MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { SnackBarData } from '../../interfaces/app-snack-bar-data.interface';
 
 fdescribe('SnackBarComponent', () => {

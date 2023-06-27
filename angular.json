@@ -37,7 +37,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/ngx-spinner/animations/pacman.css",
               "./node_modules/swiper/swiper-bundle.css"
             ],
             "scripts": [],
@@ -49,7 +48,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
+                  "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 },
                 {
@@ -116,6 +115,5 @@
         }
       }
     }
-  },
-  "defaultProject": "leagueOfLegends"
+  }
 }
