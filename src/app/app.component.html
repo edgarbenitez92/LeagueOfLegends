@@ -1,12 +1,6 @@
 <router-outlet></router-outlet>
 
-<ngx-spinner
-  class="container__spinner"
-  bdColor="rgba(0, 0, 0, 0.8)"
-  color="rgb(50, 220, 220)"
-  size="medium"
-  type="pacman"
-  [fullScreen]="true"
->
-  <p class="spinner__text">{{ 'LOADING' | translate }}</p>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" color="rgb(50, 220, 220)" size="medium" type="league-of-legends"
+  [fullScreen]="true">
+  <app-spinner></app-spinner>
 </ngx-spinner>

@@ -5,6 +5,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MiniIconsChampionsComponent } from './components/mini-icons-champions/mini-icons-champions.component';
 import { SplashChampionComponent } from './components/splash-champion/splash-champion.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 
@@ -57,6 +58,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     // Directives
     LazyLoadingImgDirective,
     FooterComponent,
+    SpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -101,6 +103,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
     FooterComponent,
     SnackBarComponent,
     AppSettingsDialogComponent,
+    SpinnerComponent,
     // Modules
     CommonModule,
     RouterModule,
