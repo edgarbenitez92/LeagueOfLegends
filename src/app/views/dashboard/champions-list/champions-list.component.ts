@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { map, pluck } from 'rxjs';
 import { ChampionsService } from 'src/app/core/services/champions/champions.service';
 import { SnackBarStatesEnum } from 'src/app/shared/enums/snack-bar-states.enum';
 import { Champion } from 'src/app/shared/interfaces/champions.interface';
-import { environment } from 'src/environments/environment';
 import { SnackBarService } from '../../../core/services/snack-bar/snack-bar.service';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-champions-list',
@@ -34,16 +32,20 @@ export class ChampionsListComponent implements OnInit {
   getChampions() {
     this.spinner.show();
 
-    this.championsService.getChampions().subscribe({
+    this.championsService.getChampions()
+      .pipe(finalize(() => {
+        setTimeout(() => {
+          this.spinner.hide()
+        }, 1000);
+      }))
+      .subscribe({
       next: (champions: any) => (this.champions = champions),
-      error: (error) => {
-        this.spinner.hide();
+      error: () => {
         this.snackBarService.open(
           SnackBarStatesEnum.DANGER,
           this.translateService.instant('ERROR_GET_CHAMPIONS')
         );
-      },
-      complete: () => this.spinner.hide(),
+      }
     });
   }
 
