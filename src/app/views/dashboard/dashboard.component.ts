@@ -5,16 +5,11 @@ import { SidenavComponent } from '../../shared/components/sidenav/sidenav.compon
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.scss'],
-    standalone: true,
-    imports: [
-        MatSidenavModule,
-        SidenavComponent,
-        NavbarComponent,
-        RouterOutlet,
-    ],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
+  standalone: true,
+  imports: [MatSidenavModule, SidenavComponent, NavbarComponent, RouterOutlet],
 })
 export class DashboardComponent implements OnInit {
   opened: boolean = false;

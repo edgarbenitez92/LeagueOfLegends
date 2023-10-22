@@ -13,24 +13,27 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatLegacyTooltipModule } from '@angular/material/legacy-tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { NgIf, NgClass, NgFor } from '@angular/common';
+import { MatLegacySnackBarModule } from '@angular/material/legacy-snack-bar';
 
 @Component({
-    selector: 'app-champions-list',
-    templateUrl: './champions-list.component.html',
-    styleUrls: ['./champions-list.component.scss'],
-    standalone: true,
-    imports: [
-        NgIf,
-        MatButtonToggleModule,
-        MatLegacyTooltipModule,
-        NgClass,
-        MatDividerModule,
-        NgFor,
-        MiniIconsChampionsComponent,
-        SplashChampionComponent,
-        FooterComponent,
-        TranslateModule,
-    ],
+  selector: 'app-champions-list',
+  templateUrl: './champions-list.component.html',
+  styleUrls: ['./champions-list.component.scss'],
+  standalone: true,
+  imports: [
+    NgIf,
+    MatButtonToggleModule,
+    MatLegacyTooltipModule,
+    NgClass,
+    MatDividerModule,
+    NgFor,
+    MiniIconsChampionsComponent,
+    SplashChampionComponent,
+    FooterComponent,
+    TranslateModule,
+    MatLegacySnackBarModule,
+  ],
+  providers: [SnackBarService],
 })
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];
@@ -52,21 +55,24 @@ export class ChampionsListComponent implements OnInit {
   getChampions() {
     this.spinner.show();
 
-    this.championsService.getChampions()
-      .pipe(finalize(() => {
-        setTimeout(() => {
-          this.spinner.hide()
-        }, 1000);
-      }))
+    this.championsService
+      .getChampions()
+      .pipe(
+        finalize(() => {
+          setTimeout(() => {
+            this.spinner.hide();
+          }, 1000);
+        })
+      )
       .subscribe({
-      next: (champions: any) => (this.champions = champions),
-      error: () => {
-        this.snackBarService.open(
-          SnackBarStatesEnum.DANGER,
-          this.translateService.instant('ERROR_GET_CHAMPIONS')
-        );
-      }
-    });
+        next: (champions: any) => (this.champions = champions),
+        error: () => {
+          this.snackBarService.open(
+            SnackBarStatesEnum.DANGER,
+            this.translateService.instant('ERROR_GET_CHAMPIONS')
+          );
+        },
+      });
   }
 
   onSelectTypeView(value: boolean): boolean {
