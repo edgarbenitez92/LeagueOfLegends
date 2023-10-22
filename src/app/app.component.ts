@@ -2,11 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { AppSettingsService } from './core/services/app-settings/app-settings.service';
 import { SummonerVersionService } from './core/services/summoner-version/summoner-version.service';
+import { SpinnerComponent } from './shared/components/spinner/spinner.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: true,
+    imports: [
+        RouterOutlet,
+        NgxSpinnerModule,
+        SpinnerComponent,
+    ],
 })
 export class AppComponent implements OnInit {
   constructor(

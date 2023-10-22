@@ -16,11 +16,12 @@ fdescribe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [AppComponent, NgxSpinnerComponent],
+    declarations: [NgxSpinnerComponent],
     imports: [
         RouterTestingModule.withRoutes([]),
         HttpClientModule,
         TranslateModule.forRoot(translateModuleConfig),
+        AppComponent,
     ],
     providers: [AppSettingsService, TranslateService],
     schemas: [NO_ERRORS_SCHEMA],
