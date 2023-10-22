@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { AppSettingsService } from './core/services/app-settings/app-settings.service';
+import { SummonerVersionService } from './core/services/summoner-version/summoner-version.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,15 @@ import { AppSettingsService } from './core/services/app-settings/app-settings.se
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private appSettingsService: AppSettingsService, private swUpdate: SwUpdate) { }
+  constructor(
+    private appSettingsService: AppSettingsService,
+    private swUpdate: SwUpdate,
+    private summonerVersionService: SummonerVersionService
+  ) {}
 
   ngOnInit(): void {
     this.initSettingsService();
+    this.getLastApiVersion();
   }
 
   initSettingsService() {
@@ -29,5 +35,9 @@ export class AppComponent implements OnInit {
         });
       }
     });
+  }
+
+  getLastApiVersion() {
+    this.summonerVersionService.getLeagueOfLegendsVersions().subscribe();
   }
 }

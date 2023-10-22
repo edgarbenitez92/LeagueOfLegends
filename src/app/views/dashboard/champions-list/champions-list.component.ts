@@ -34,36 +34,17 @@ export class ChampionsListComponent implements OnInit {
   getChampions() {
     this.spinner.show();
 
-    this.championsService
-      .getChampions()
-      .pipe(
-        pluck('data'),
-        map((data) => {
-          let championsCards: any[] = [];
-          let championsArr: any = Object.values(data);
-          for (let champion of championsArr) {
-            const name = champion.name;
-            const image = `${environment.apiBaseUrl}/img/champion/loading/${champion.id}_0.jpg`;
-            const id = champion.id;
-            const difficulty = champion.info.difficulty;
-            const roles = champion.tags;
-            const miniImage = `${environment.apiBaseUrl}/${champion.version}/img/champion/${champion.id}.png`;
-            championsCards.push({ name, image, miniImage, id, difficulty, roles });
-          }
-          return championsCards;
-        })
-      )
-      .subscribe({
-        next: (champions: any) => (this.champions = champions),
-        error: (error) => {
-          this.spinner.hide();
-          this.snackBarService.open(
-            SnackBarStatesEnum.DANGER,
-            this.translateService.instant('ERROR_GET_CHAMPIONS')
-          );
-        },
-        complete: () => this.spinner.hide(),
-      });
+    this.championsService.getChampions().subscribe({
+      next: (champions: any) => (this.champions = champions),
+      error: (error) => {
+        this.spinner.hide();
+        this.snackBarService.open(
+          SnackBarStatesEnum.DANGER,
+          this.translateService.instant('ERROR_GET_CHAMPIONS')
+        );
+      },
+      complete: () => this.spinner.hide(),
+    });
   }
 
   onSelectTypeView(value: boolean): boolean {
