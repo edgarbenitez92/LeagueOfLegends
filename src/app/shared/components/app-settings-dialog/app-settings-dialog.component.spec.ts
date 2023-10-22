@@ -15,8 +15,7 @@ fdescribe('AppSettingsDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppSettingsDialogComponent],
-      imports: [
+    imports: [
         HttpClientModule,
         TranslateModule.forRoot(translateModuleConfig),
         MatSnackBarModule,
@@ -24,9 +23,10 @@ fdescribe('AppSettingsDialogComponent', () => {
         MatInputModule,
         FormsModule,
         ReactiveFormsModule,
-      ],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
+        AppSettingsDialogComponent,
+    ],
+    schemas: [NO_ERRORS_SCHEMA],
+}).compileComponents();
 
     fixture = TestBed.createComponent(AppSettingsDialogComponent);
     component = fixture.componentInstance;

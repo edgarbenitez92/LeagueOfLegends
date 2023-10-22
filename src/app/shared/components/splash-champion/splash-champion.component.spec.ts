@@ -14,12 +14,8 @@ fdescribe('SplashChampionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SplashChampionComponent],
-      imports: [RouterTestingModule],
-      // providers: [
-      //   { provide: Router, useClass: FakeRouter }
-      // ]
-    }).compileComponents();
+    imports: [RouterTestingModule, SplashChampionComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(SplashChampionComponent);
     component = fixture.componentInstance;

@@ -16,10 +16,9 @@ fdescribe('SidenavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SidenavComponent],
-      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
+    imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig), SidenavComponent],
+    schemas: [NO_ERRORS_SCHEMA],
+}).compileComponents();
 
     fixture = TestBed.createComponent(SidenavComponent);
     component = fixture.componentInstance;

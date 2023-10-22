@@ -14,10 +14,9 @@ fdescribe('SnackBarComponent', () => {
   beforeEach(async () => {
     component = new SnackBarComponent(snackRef, dataSnack);
     await TestBed.configureTestingModule({
-      declarations: [SnackBarComponent],
-      imports: [MatSnackBarModule, MatSnackBarRef],
-      schemas: [NO_ERRORS_SCHEMA]
-    }).compileComponents();
+    imports: [MatSnackBarModule, MatSnackBarRef, SnackBarComponent],
+    schemas: [NO_ERRORS_SCHEMA]
+}).compileComponents();
 
     fixture = TestBed.createComponent(SnackBarComponent);
     component = fixture.componentInstance;

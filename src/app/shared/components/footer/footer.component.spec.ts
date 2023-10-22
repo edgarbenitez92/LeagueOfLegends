@@ -11,9 +11,8 @@ fdescribe('FooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FooterComponent],
-      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
-    }).compileComponents();
+    imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig), FooterComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;

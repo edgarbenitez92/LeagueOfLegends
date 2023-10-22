@@ -18,12 +18,8 @@ fdescribe('MiniIconsChampionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MiniIconsChampionsComponent],
-      imports: [RouterTestingModule],
-      // providers: [
-      //   { provide: Router, useClass: FakeRouter }
-      // ]
-    }).compileComponents();
+    imports: [RouterTestingModule, MiniIconsChampionsComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(MiniIconsChampionsComponent);
     component = fixture.componentInstance;

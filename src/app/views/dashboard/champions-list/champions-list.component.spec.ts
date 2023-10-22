@@ -26,8 +26,7 @@ fdescribe('ChampionsListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChampionsListComponent, FooterComponent, MiniIconsChampionsComponent],
-      imports: [
+    imports: [
         HttpClientModule,
         TranslateModule.forRoot(translateModuleConfig),
         MatSnackBarModule,
@@ -36,9 +35,10 @@ fdescribe('ChampionsListComponent', () => {
         MatDividerModule,
         MatTooltipModule,
         RouterTestingModule,
-      ],
-      providers: [AppSettingsService, ChampionsService, TranslateService, SnackBarService],
-    });
+        ChampionsListComponent, FooterComponent, MiniIconsChampionsComponent,
+    ],
+    providers: [AppSettingsService, ChampionsService, TranslateService, SnackBarService],
+});
 
     fixture = TestBed.createComponent(ChampionsListComponent);
     component = fixture.componentInstance;

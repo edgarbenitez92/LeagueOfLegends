@@ -17,11 +17,10 @@ fdescribe('AboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutComponent],
-      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
-      providers: [{ provide: Router, useClass: FakeRouter }],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
+    imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig), AboutComponent],
+    providers: [{ provide: Router, useClass: FakeRouter }],
+    schemas: [NO_ERRORS_SCHEMA],
+}).compileComponents();
 
     fixture = TestBed.createComponent(AboutComponent);
     component = fixture.componentInstance;

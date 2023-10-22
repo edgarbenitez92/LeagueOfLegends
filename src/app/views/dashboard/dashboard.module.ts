@@ -7,12 +7,9 @@ import { ChampionDetailComponent } from './champion-detail/champion-detail.compo
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    ChampionsListComponent,
-    ChampionDetailComponent,
-    AboutComponent,
-  ],
-  imports: [SharedModule, DashboardRoutingModule],
+    imports: [SharedModule, DashboardRoutingModule, DashboardComponent,
+        ChampionsListComponent,
+        ChampionDetailComponent,
+        AboutComponent],
 })
 export class DashboardModule {}

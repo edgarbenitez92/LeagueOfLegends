@@ -2,11 +2,15 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatLegacySnackBarRef as MatSnackBarRef, MAT_LEGACY_SNACK_BAR_DATA as MAT_SNACK_BAR_DATA } from '@angular/material/legacy-snack-bar';
 import { SnackBarStatesEnum } from '../../enums/snack-bar-states.enum';
 import { SnackBarData } from '../../interfaces/app-snack-bar-data.interface';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-snack-bar',
-  templateUrl: './snack-bar.component.html',
-  styleUrls: ['./snack-bar.component.scss'],
+    selector: 'app-snack-bar',
+    templateUrl: './snack-bar.component.html',
+    styleUrls: ['./snack-bar.component.scss'],
+    standalone: true,
+    imports: [MatIconModule, MatLegacyButtonModule],
 })
 export class SnackBarComponent implements OnInit {
   icon: string;

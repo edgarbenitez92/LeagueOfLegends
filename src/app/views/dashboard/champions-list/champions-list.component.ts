@@ -1,16 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ChampionsService } from 'src/app/core/services/champions/champions.service';
 import { SnackBarStatesEnum } from 'src/app/shared/enums/snack-bar-states.enum';
 import { Champion } from 'src/app/shared/interfaces/champions.interface';
 import { SnackBarService } from '../../../core/services/snack-bar/snack-bar.service';
 import { finalize } from 'rxjs';
+import { FooterComponent } from '../../../shared/components/footer/footer.component';
+import { SplashChampionComponent } from '../../../shared/components/splash-champion/splash-champion.component';
+import { MiniIconsChampionsComponent } from '../../../shared/components/mini-icons-champions/mini-icons-champions.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatLegacyTooltipModule } from '@angular/material/legacy-tooltip';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { NgIf, NgClass, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-champions-list',
-  templateUrl: './champions-list.component.html',
-  styleUrls: ['./champions-list.component.scss'],
+    selector: 'app-champions-list',
+    templateUrl: './champions-list.component.html',
+    styleUrls: ['./champions-list.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        MatButtonToggleModule,
+        MatLegacyTooltipModule,
+        NgClass,
+        MatDividerModule,
+        NgFor,
+        MiniIconsChampionsComponent,
+        SplashChampionComponent,
+        FooterComponent,
+        TranslateModule,
+    ],
 })
 export class ChampionsListComponent implements OnInit {
   champions: Champion[] = [];

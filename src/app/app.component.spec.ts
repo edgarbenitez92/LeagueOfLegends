@@ -16,15 +16,15 @@ fdescribe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent, NgxSpinnerComponent],
-      imports: [
+    declarations: [AppComponent, NgxSpinnerComponent],
+    imports: [
         RouterTestingModule.withRoutes([]),
         HttpClientModule,
         TranslateModule.forRoot(translateModuleConfig),
-      ],
-      providers: [AppSettingsService, TranslateService],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
+    ],
+    providers: [AppSettingsService, TranslateService],
+    schemas: [NO_ERRORS_SCHEMA],
+}).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;

@@ -8,13 +8,32 @@ import { SwiperConfigModel } from 'src/app/shared/custom/custom-swiper-config';
 import { Baron } from 'src/app/shared/mocks/baron.mock';
 import { Meta } from '@angular/platform-browser';
 import { AppSettingsService } from '../../../core/services/app-settings/app-settings.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatLegacyTooltipModule } from '@angular/material/legacy-tooltip';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
+import { SwiperModule } from 'swiper/angular';
+import { NgIf, NgFor, TitleCasePipe } from '@angular/common';
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 @Component({
-  selector: 'app-champion-detail',
-  templateUrl: './champion-detail.component.html',
-  styleUrls: ['./champion-detail.component.scss'],
+    selector: 'app-champion-detail',
+    templateUrl: './champion-detail.component.html',
+    styleUrls: ['./champion-detail.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        SwiperModule,
+        NgFor,
+        MatLegacyButtonModule,
+        MatLegacyTooltipModule,
+        MatIconModule,
+        MatDividerModule,
+        TitleCasePipe,
+        TranslateModule,
+    ],
 })
 export class ChampionDetailComponent implements OnInit {
   champion!: Champion;

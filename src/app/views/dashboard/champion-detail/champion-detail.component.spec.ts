@@ -35,15 +35,14 @@ fdescribe('ChampionDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ChampionDetailComponent],
-      imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig)],
-      providers: [
+    imports: [HttpClientModule, TranslateModule.forRoot(translateModuleConfig), ChampionDetailComponent],
+    providers: [
         ChampionsService,
         { provide: Router, useClass: FakeRouter },
         { provide: ActivatedRoute, useClass: FakeActivatedRoute },
-      ],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
+    ],
+    schemas: [NO_ERRORS_SCHEMA],
+}).compileComponents();
 
     fixture = TestBed.createComponent(ChampionDetailComponent);
     component = fixture.componentInstance;
